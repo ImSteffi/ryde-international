@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "ryde-international-backend": {
+      "main": "src/ryde-international-backend/main.mo",
+      "type": "motoko"
+    },
+    "ryde-international-frontend": {
+      "dependencies": [
+        "ryde-international-backend"
+      ],
+      "source": [
+        "src/ryde-international-frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "ryde-international-frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
