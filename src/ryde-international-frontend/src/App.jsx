@@ -1,29 +1,24 @@
-import { useState } from 'react';
-import { ryde_international_backend } from 'declarations/ryde-international-backend';
+// import { useState } from 'react';
+// import { ryde_international_backend } from 'declarations/ryde-international-backend';
 
 function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    ryde_international_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
+    <main className="container">
+      <div className="section section1">
+        <div className="content">Ryde Design</div>
+        <div className="content">Ryde Growth</div>
+        <div className="content">Ryde Experiences</div>
+      </div>
+      <div className="section section2">
+        <div className="content">Our Journey</div>
+        <div className="content">What We Believe In</div>
+        <div className="content">What Do We Do?</div>
+      </div>
+      <div className="section section3">
+        <div className="content">My Story</div>
+        <div className="content">My Work</div>
+        <div className="content">Who I've Worked With</div>
+      </div>
     </main>
   );
 }
