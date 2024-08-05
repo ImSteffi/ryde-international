@@ -1,8 +1,10 @@
 /* Variables */
 $primary-color: #3498db;
 $secondary-color: #2980b9;
+$hover-color: #1abc9c;
 $text-color: #fff;
-$padding: 20px;
+$padding: 5px;
+$margin: 5px;
 
 * {
   box-sizing: border-box;
@@ -25,7 +27,6 @@ body, html {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: $padding;
   color: $text-color;
   position: relative;
   overflow: hidden;
@@ -60,10 +61,29 @@ body, html {
 .content {
   flex: 1;
   height: 100%;
+  position: relative;
   text-align: center;
   background-color: darken($primary-color, 10%);
   border: 2px solid black;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 0 10px;
+}
+
+.content h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+}
+
+
+.content:hover {
+  background-color: $hover-color;
+  color: $text-color; 
+  padding: 15%;
+}
+
+.sec2con2 {
+  // padding: 100px;
 }
