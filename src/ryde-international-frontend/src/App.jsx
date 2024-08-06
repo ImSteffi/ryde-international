@@ -51,6 +51,27 @@ function App() {
     setVisibleSection(null);
   };
 
+  const content = {
+    sec1con1:
+      "As the founder of Ryde International, I started this journey with a vision to redefine the boundaries of global consulting. With over a decade of experience in the industry, my story is one of innovation, perseverance, and a relentless pursuit of excellence.",
+    sec1con2:
+      "At Ryde International, we believe in the power of collaboration, integrity, and innovation. Our core values guide everything we do, from the way we interact with clients to the solutions we deliver. We are committed to driving meaningful change for businesses worldwide.",
+    sec1con3:
+      "Our journey began with a single idea: to create a consulting firm that truly understands the unique challenges of today's global market. Over the years, we have grown into a trusted partner for businesses across various industries, providing them with the insights and strategies needed to thrive.",
+    sec2con1:
+      "Throughout my career, I have had the privilege of working with some of the most forward-thinking companies around the world. My work is centered on delivering actionable insights, sustainable growth strategies, and transformative solutions that empower businesses to succeed.",
+    sec2con2:
+      "Ryde International specializes in providing tailored consulting services that address the complex needs of modern businesses. From strategy development to digital transformation, we offer a comprehensive range of services designed to help our clients navigate the challenges of today's dynamic market environment.",
+    sec2con3:
+      "Over the years, I have partnered with a diverse range of clients, from startups to Fortune 500 companies. My focus has always been on building long-lasting relationships that are based on trust, mutual respect, and a shared commitment to achieving outstanding results.",
+    sec3con1:
+      "At Ryde International, design is at the heart of everything we do. Our design philosophy is about creating solutions that are not only functional but also visually compelling. We believe that great design can transform businesses and create meaningful connections with customers.",
+    sec3con2:
+      "Growth is more than just expanding your business; it's about creating sustainable success. At Ryde International, we work closely with our clients to develop growth strategies that are innovative, data-driven, and tailored to their unique needs. We help businesses scale and succeed in today's competitive market.",
+    sec3con3:
+      "Creating memorable experiences is key to building lasting customer relationships. Ryde International specializes in designing experiences that resonate with your audience, from digital platforms to physical spaces. We help you create impactful, meaningful interactions that drive engagement and loyalty.",
+  };
+
   return (
     <main className="container" onClick={handleOutsideClick}>
       <div className="section section1">
@@ -60,9 +81,12 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec1con1")}
         >
-          <h2>My Story</h2>
-          <div style={{ opacity: visibleSection === "sec1con1" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>My Story</h3>
+          <div
+            style={{ opacity: visibleSection === "sec1con1" ? 1 : 0 }}
+            className="intoText"
+          >
+            <p>{content.sec1con1}</p>
           </div>
         </div>
         <div
@@ -71,9 +95,12 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec1con2")}
         >
-          <h2>What We Believe In</h2>
-          <div style={{ opacity: visibleSection === "sec1con2" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>What We Believe In</h3>
+          <div
+            style={{ opacity: visibleSection === "sec1con2" ? 1 : 0 }}
+            className="intoText"
+          >
+            <p>{content.sec1con2}</p>
           </div>
         </div>
         <div
@@ -82,9 +109,12 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec1con3")}
         >
-          <h2>Our Journey</h2>
-          <div style={{ opacity: visibleSection === "sec1con3" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>Our Journey</h3>
+          <div
+            style={{ opacity: visibleSection === "sec1con3" ? 1 : 0 }}
+            className="intoText"
+          >
+            <p>{content.sec1con3}</p>
           </div>
         </div>
       </div>
@@ -96,9 +126,12 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec2con1")}
         >
-          <h2>My Work</h2>
-          <div style={{ opacity: visibleSection === "sec2con1" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>My Work</h3>
+          <div
+            style={{ opacity: visibleSection === "sec2con1" ? 1 : 0 }}
+            className="intoText"
+          >
+            <p>{content.sec2con1}</p>
           </div>
         </div>
         <div
@@ -107,12 +140,12 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec2con2")}
         >
-          <h2>What Do We Do?</h2>
+          <h3>What Do We Do?</h3>
           <div
-            className="sec2con2text"
             style={{ opacity: visibleSection === "sec2con2" ? 1 : 0 }}
+            className="intoText"
           >
-            <p>LOREM IPSUM</p>
+            <p>{content.sec2con2}</p>
           </div>
         </div>
         <div
@@ -121,9 +154,9 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec2con3")}
         >
-          <h2>Who I've Worked With</h2>
-          <div style={{ opacity: visibleSection === "sec2con3" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>Who I've Worked With</h3>
+          <div style={{ opacity: visibleSection === "sec2con3" ? 1 : 0 }} className="intoText">
+            <p>{content.sec2con3}</p>
           </div>
         </div>
       </div>
@@ -135,9 +168,9 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec3con1")}
         >
-          <h2>Ryde Design</h2>
-          <div style={{ opacity: visibleSection === "sec3con1" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>Ryde Design</h3>
+          <div style={{ opacity: visibleSection === "sec3con1" ? 1 : 0 }} className="intoText">
+            <p>{content.sec3con1}</p>
           </div>
         </div>
         <div
@@ -146,9 +179,9 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec3con2")}
         >
-          <h2>Ryde Growth</h2>
-          <div style={{ opacity: visibleSection === "sec3con2" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>Ryde Growth</h3>
+          <div style={{ opacity: visibleSection === "sec3con2" ? 1 : 0 }} className="intoText">
+            <p>{content.sec3con2}</p>
           </div>
         </div>
         <div
@@ -157,9 +190,9 @@ function App() {
           onMouseLeave={handleMouseLeave}
           onClick={() => handleClick("sec3con3")}
         >
-          <h2>Ryde Experiences</h2>
-          <div style={{ opacity: visibleSection === "sec3con3" ? 1 : 0 }}>
-            <p>LOREM IPSUM</p>
+          <h3>Ryde Experiences</h3>
+          <div style={{ opacity: visibleSection === "sec3con3" ? 1 : 0 }} className="intoText">
+            <p>{content.sec3con3}</p>
           </div>
         </div>
       </div>
@@ -168,7 +201,7 @@ function App() {
         <div className="cardOverlay show">
           <div className="card">
             <h3>{openCard}</h3>
-            <p>LOREM IPSUM</p>
+            <p>{content[openCard]}</p>
             <button onClick={handleCloseCard}>Close</button>
           </div>
         </div>
