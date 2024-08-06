@@ -1,3 +1,3 @@
 style  - 
 <!-- diagonal sections -->
-over hover
+hover transitions

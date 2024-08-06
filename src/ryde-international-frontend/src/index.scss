@@ -5,12 +5,15 @@ $hover-color: #1abc9c;
 $text-color: #fff;
 $padding: 5px;
 $margin: 5px;
+$transition-duration: 0.5s; /* Customize the smoothness (duration) here */
+$transition-timing-function: ease;
 
 * {
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -32,8 +35,7 @@ body, html {
   overflow: hidden;
 }
 
-.section1, .section2, .section3 {
-}
+/* Section Backgrounds */
 
 .section1 {
   background-color: $primary-color;
@@ -58,7 +60,9 @@ body, html {
   z-index: -1;
 }
 
-.content {
+/* Content Div Styling */
+
+.contentDiv {
   flex: 1;
   height: 100%;
   position: relative;
@@ -67,9 +71,14 @@ body, html {
   border: 2px solid black;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color $transition-duration $transition-timing-function,
+    color $transition-duration $transition-timing-function,
+    padding $transition-duration $transition-timing-function,
+    opacity $transition-duration $transition-timing-function;
 }
 
-.content h1 {
+.contentDiv h2 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -77,13 +86,69 @@ body, html {
   margin: 0;
 }
 
+/* Hover Effects for Desktop */
 
-.content:hover {
-  background-color: $hover-color;
-  color: $text-color; 
+.container .contentDiv:hover {
+  opacity: 1;
+  color: $text-color;
   padding: 15%;
 }
 
-.sec2con2 {
-  // padding: 100px;
+.container .contentDiv:hover > h2 {
+  top: 15%;
+  transition: top $transition-duration $transition-timing-function,
+    color $transition-duration $transition-timing-function,
+    padding $transition-duration $transition-timing-function,
+    opacity $transition-duration $transition-timing-function;
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+  .contentDiv {
+    opacity: 1; /* Ensure default opacity for mobile */
+  }
+}
+
+/* --------- Card Overlay --------- */
+
+.cardOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.839); /* Black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity $transition-duration $transition-timing-function;
+}
+
+.cardOverlay.show {
+  opacity: 1;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.card button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color $transition-duration $transition-timing-function;
+}
+
+.card button:hover {
+  background-color: $secondary-color;
 }
