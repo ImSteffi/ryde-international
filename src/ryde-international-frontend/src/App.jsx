@@ -40,7 +40,7 @@ function App() {
   };
 
   const handleOutsideClick = (event) => {
-    if (event.target.className === "cardOverlay") {
+    if (!event.target.closest(".card")) {
       setOpenCard(null);
       setVisibleSection(null);
     }
@@ -73,7 +73,7 @@ function App() {
   };
 
   return (
-    <main className="container" onClick={handleOutsideClick}>
+    <main className="container">
       <div className="section section1">
         <div
           className="contentDiv sec1con1"
@@ -198,7 +198,7 @@ function App() {
       </div>
 
       {openCard && (
-        <div className="cardOverlay show">
+        <div className="cardOverlay show" onClick={handleOutsideClick}>
           <div className="card">
             <h3>{openCard}</h3>
             <p>{content[openCard]}</p>
