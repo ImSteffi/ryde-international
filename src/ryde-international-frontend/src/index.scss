@@ -3,7 +3,6 @@ $primary-color: #3498db;
 $secondary-color: #2980b9;
 $hover-color: #1abc9c;
 $text-color: #fff;
-$padding: 5px;
 $margin: 5px;
 $transition-duration: 0.5s; /* Customize the smoothness (duration) here */
 $transition-timing-function: ease;
@@ -89,18 +88,16 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
+  height: 100%;
+  padding: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   font-size: small;
-  padding: 10px; 
-  box-sizing: border-box; 
+  box-sizing: border-box;
   text-align: center;
-  padding: 5%;
 }
-
 
 /* Hover Effects for Desktop */
 
@@ -140,7 +137,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.839); /* Black background */
+  background: rgba(0, 0, 0, 0.839);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,6 +151,7 @@ html {
 }
 
 .card {
+  position: relative;
   background: white;
   padding: 5%;
   margin: 15%;
@@ -161,19 +159,76 @@ html {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.card button {
-  margin-top: 20px;
-  padding: 10px 20px;
+.card-content {
+  flex: 1;
+}
+
+/* Arrow Navigation Styling */
+
+/* Arrow Navigation Styling */
+.cardNavigation button {
+  padding: 0;
+  border: none;
+  background: none;
   background-color: $primary-color;
   color: white;
-  border: none;
-  border-radius: 4px;
   cursor: pointer;
   transition: background-color $transition-duration $transition-timing-function;
 }
 
-.card button:hover {
+.cardNavigation button:hover {
   background-color: $secondary-color;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  width: 5vw;
+  height: 5vw;
+  font-size: 2vw;
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  color: $primary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-arrow {
+  height: 100%;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.right-arrow {
+  height: 100%;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.up-arrow {
+  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.down-arrow {
+  width: 100%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arrow:hover {
+  color: $hover-color;
 }

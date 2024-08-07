@@ -5,6 +5,12 @@ function App() {
   const [openCard, setOpenCard] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
+  const sectionOrder = [
+    ["sec1con1", "sec1con2", "sec1con3"],
+    ["sec2con1", "sec2con2", "sec2con3"],
+    ["sec3con1", "sec3con2", "sec3con3"],
+  ];
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -40,16 +46,61 @@ function App() {
   };
 
   const handleOutsideClick = (event) => {
-    if (!event.target.closest(".card")) {
+    if (openCard && !event.target.closest(".card")) {
       setOpenCard(null);
       setVisibleSection(null);
     }
   };
 
-  const handleCloseCard = () => {
-    setOpenCard(null);
-    setVisibleSection(null);
-  };
+  const navigateCard = (direction) => {
+    if (!openCard) return;
+  
+    let row, col;
+  
+    sectionOrder.forEach((rowSections, rowIndex) => {
+      const colIndex = rowSections.indexOf(openCard);
+      if (colIndex !== -1) {
+        row = rowIndex;
+        col = colIndex;
+      }
+    });
+  
+    if (direction === "left") {
+      if (col > 0) {
+        col--;
+      } else if (row > 0) {
+        row--;
+        col = sectionOrder[row].length - 1;
+      } else {
+        row = sectionOrder.length - 1;
+        col = sectionOrder[row].length - 1;
+      }
+    } else if (direction === "right") {
+      if (col < sectionOrder[row].length - 1) {
+        col++;
+      } else if (row < sectionOrder.length - 1) {
+        row++;
+        col = 0;
+      } else {
+        row = 0;
+        col = 0;
+      }
+    } else if (direction === "up") {
+      if (row > 0) {
+        row--;
+      } else {
+        row = sectionOrder.length - 1;
+      }
+    } else if (direction === "down") {
+      if (row < sectionOrder.length - 1) {
+        row++;
+      } else {
+        row = 0;
+      }
+    }
+  
+    setOpenCard(sectionOrder[row][col]);
+  };  
 
   const content = {
     sec1con1:
@@ -73,7 +124,7 @@ function App() {
   };
 
   return (
-    <main className="container">
+    <main className="container" onClick={handleOutsideClick}>
       <div className="section section1">
         <div
           className="contentDiv sec1con1"
@@ -155,7 +206,10 @@ function App() {
           onClick={() => handleClick("sec2con3")}
         >
           <h3>Who I've Worked With</h3>
-          <div style={{ opacity: visibleSection === "sec2con3" ? 1 : 0 }} className="intoText">
+          <div
+            style={{ opacity: visibleSection === "sec2con3" ? 1 : 0 }}
+            className="intoText"
+          >
             <p>{content.sec2con3}</p>
           </div>
         </div>
@@ -169,7 +223,10 @@ function App() {
           onClick={() => handleClick("sec3con1")}
         >
           <h3>Ryde Design</h3>
-          <div style={{ opacity: visibleSection === "sec3con1" ? 1 : 0 }} className="intoText">
+          <div
+            style={{ opacity: visibleSection === "sec3con1" ? 1 : 0 }}
+            className="intoText"
+          >
             <p>{content.sec3con1}</p>
           </div>
         </div>
@@ -180,7 +237,10 @@ function App() {
           onClick={() => handleClick("sec3con2")}
         >
           <h3>Ryde Growth</h3>
-          <div style={{ opacity: visibleSection === "sec3con2" ? 1 : 0 }} className="intoText">
+          <div
+            style={{ opacity: visibleSection === "sec3con2" ? 1 : 0 }}
+            className="intoText"
+          >
             <p>{content.sec3con2}</p>
           </div>
         </div>
@@ -191,7 +251,10 @@ function App() {
           onClick={() => handleClick("sec3con3")}
         >
           <h3>Ryde Experiences</h3>
-          <div style={{ opacity: visibleSection === "sec3con3" ? 1 : 0 }} className="intoText">
+          <div
+            style={{ opacity: visibleSection === "sec3con3" ? 1 : 0 }}
+            className="intoText"
+          >
             <p>{content.sec3con3}</p>
           </div>
         </div>
@@ -202,7 +265,32 @@ function App() {
           <div className="card">
             <h3>{openCard}</h3>
             <p>{content[openCard]}</p>
-            <button onClick={handleCloseCard}>Close</button>
+            <div className="cardNavigation">
+              <button
+                className="arrow up-arrow"
+                onClick={() => navigateCard("up")}
+              >
+                ↑
+              </button>
+              <button
+                className="arrow down-arrow"
+                onClick={() => navigateCard("down")}
+              >
+                ↓
+              </button>
+              <button
+                className="arrow left-arrow"
+                onClick={() => navigateCard("left")}
+              >
+                ←
+              </button>
+              <button
+                className="arrow right-arrow"
+                onClick={() => navigateCard("right")}
+              >
+                →
+              </button>
+            </div>
           </div>
         </div>
       )}
