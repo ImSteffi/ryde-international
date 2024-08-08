@@ -4,7 +4,7 @@ $secondary-color: #2980b9;
 $hover-color: #1abc9c;
 $text-color: #fff;
 $margin: 5px;
-$transition-duration: 0.5s; /* Customize the smoothness (duration) here */
+$transition-duration: 0.5s;
 $transition-timing-function: ease;
 
 * {
@@ -34,7 +34,6 @@ html {
   overflow: hidden;
 }
 
-/* Section Backgrounds */
 .section1 {
   background-color: $primary-color;
 }
@@ -58,7 +57,6 @@ html {
   z-index: -1;
 }
 
-/* Content Div Styling */
 .contentDiv {
   flex: 1;
   height: 100%;
@@ -99,8 +97,6 @@ html {
   text-align: center;
 }
 
-/* Hover Effects for Desktop */
-
 .container .contentDiv {
   opacity: 1;
 }
@@ -123,14 +119,12 @@ html {
     opacity $transition-duration $transition-timing-function;
 }
 
-/* Mobile-specific Styles */
 @media (max-width: 768px) {
   .contentDiv {
-    opacity: 1; /* Ensure default opacity for mobile */
+    opacity: 1;
   }
 }
 
-/* --------- Card Overlay --------- */
 .cardOverlay {
   position: fixed;
   top: 0;
@@ -165,13 +159,53 @@ html {
   justify-content: center;
 }
 
-.card-content {
-  flex: 1;
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Arrow Navigation Styling */
+.slider {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform $transition-duration $transition-timing-function;
+}
 
-/* Arrow Navigation Styling */
+.slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity $transition-duration $transition-timing-function;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.sliderButton {
+  background: none;
+  border: none;
+  color: $primary-color;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color $transition-duration $transition-timing-function;
+}
+
+.sliderButton:hover {
+  color: $hover-color;
+}
+
 .cardNavigation button {
   padding: 0;
   border: none;
