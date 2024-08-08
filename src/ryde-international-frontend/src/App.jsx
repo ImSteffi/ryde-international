@@ -8,7 +8,7 @@ function App() {
   const canSwitchSlide = useRef(true);
   const touchStartY = useRef(0);
   const touchEndY = useRef(0);
-
+  
   const sectionOrder = [
     ["sec1con1", "sec1con2", "sec1con3"],
     ["sec2con1", "sec2con2", "sec2con3"],
@@ -40,6 +40,7 @@ function App() {
     if (isMobile) {
       if (visibleSection === section) {
         setOpenCard(section);
+        setCurrentSlide(0);
         setVisibleSection(null);
       } else {
         setVisibleSection(section);
@@ -49,14 +50,15 @@ function App() {
       setCurrentSlide(0);
     }
   };
-
+  
   const handleOutsideClick = (event) => {
     if (openCard && !event.target.closest(".card")) {
       setOpenCard(null);
       setVisibleSection(null);
+      setCurrentSlide(0);
     }
   };
-
+  
   const handleScroll = (event) => {
     if (!openCard || !canSwitchSlide.current) return;
 
@@ -87,7 +89,10 @@ function App() {
 
     const touchDistance = touchStartY.current - touchEndY.current;
 
-    if (touchDistance > 50 && currentSlide < content[openCard].slides.length - 1) {
+    if (
+      touchDistance > 50 &&
+      currentSlide < content[openCard].slides.length - 1
+    ) {
       setCurrentSlide((prev) => prev + 1);
     } else if (touchDistance < -50 && currentSlide > 0) {
       setCurrentSlide((prev) => prev - 1);
@@ -146,54 +151,387 @@ function App() {
     }
 
     setOpenCard(sectionOrder[row][col]);
-    setCurrentSlide(0); // Reset to the first slide when switching sections
+    setCurrentSlide(0);
   };
 
   const content = {
     sec1con1: {
-      title: "My Story",
+      title: "Our Founder",
       text: "As the founder of Ryde International, I started this journey with a vision to redefine the boundaries of global consulting. With over a decade of experience in the industry, my story is one of innovation, perseverance, and a relentless pursuit of excellence.",
-      slides: ["My Story first slide", "My Story second slide", "My Story third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>My Story - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>My Story - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>My Story - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec1con2: {
-      title: "What We Believe In",
+      title: "We Believe In",
       text: "At Ryde International, we believe in the power of collaboration, integrity, and innovation. Our core values guide everything we do, from the way we interact with clients to the solutions we deliver. We are committed to driving meaningful change for businesses worldwide.",
-      slides: ["What We Believe In first slide", "What We Believe In second slide", "What We Believe In third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>What We Believe In - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>What We Believe In - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>What We Believe In - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec1con3: {
       title: "Our Journey",
       text: "Our journey began with a single idea: to create a consulting firm that truly understands the unique challenges of today's global market. Over the years, we have grown into a trusted partner for businesses across various industries, providing them with the insights and strategies needed to thrive.",
-      slides: ["first slide", "second slide", "third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>Our Journey - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>Our Journey - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>Our Journey - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec2con1: {
-      title: "My Work",
+      title: "NWBrand",
       text: "Throughout my career, I have had the privilege of working with some of the most forward-thinking companies around the world. My work is centered on delivering actionable insights, sustainable growth strategies, and transformative solutions that empower businesses to succeed.",
-      slides: ["first slide", "second slide", "third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>My Work - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>My Work - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>My Work - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec2con2: {
-      title: "What Do We Do",
+      title: "What We Do",
       text: "Ryde International specializes in providing tailored consulting services that address the complex needs of modern businesses. From strategy development to digital transformation, we offer a comprehensive range of services designed to help our clients navigate the challenges of today's dynamic market environment.",
-      slides: ["first slide", "second slide", "third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>What Do We Do - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>What Do We Do - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>What Do We Do - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec2con3: {
-      title: "Who I've Worked With",
+      title: "Our Work",
       text: "Over the years, I have partnered with a diverse range of clients, from startups to Fortune 500 companies. My focus has always been on building long-lasting relationships that are based on trust, mutual respect, and a shared commitment to achieving outstanding results.",
-      slides: ["first slide", "second slide", "third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>Who I've Worked With - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>Who I've Worked With - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>Who I've Worked With - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec3con1: {
       title: "Ryde Design",
       text: "At Ryde International, design is at the heart of everything we do. Our design philosophy is about creating solutions that are not only functional but also visually compelling. We believe that great design can transform businesses and create meaningful connections with customers.",
-      slides: ["first slide", "second slide", "third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>Ryde Design - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>Ryde Design - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>Ryde Design - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec3con2: {
       title: "Ryde Growth",
-      text: "Growth is more than just expanding your business; it's about creating sustainable success. At Ryde International, we work closely with our clients to develop growth strategies that are innovative, data-driven, and tailored to their unique needs. We help businesses scale and succeed in today's competitive market.",
-      slides: ["first slide", "second slide", "third slide"],
+      text: "Growth is more than just expanding your business; it's about creating sustainable success. At Ryde International, we work` closely with our clients to develop growth strategies that are innovative, data-driven, and tailored to their unique needs. We help businesses scale and succeed in today's competitive market.",
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>Ryde Growth - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>Ryde Growth - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>Ryde Growth - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
     sec3con3: {
-      title: "Ryde Experiences",
+      title: "Ryde Clothing",
       text: "Creating memorable experiences is key to building lasting customer relationships. Ryde International specializes in designing experiences that resonate with your audience, from digital platforms to physical spaces. We help you create impactful, meaningful interactions that drive engagement and loyalty.",
-      slides: ["first slide", "second slide", "third slide"],
+      slides: [
+        {
+          id: "slide1",
+          content: (
+            <div>
+              <h2>Ryde Experiences - Slide 1</h2>
+              <p>This is the content of the first slide.</p>
+              <div className="additional-info">
+                <p>More details about the first slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide2",
+          content: (
+            <div>
+              <h2>Ryde Experiences - Slide 2</h2>
+              <p>This is the content of the second slide.</p>
+              <div className="additional-info">
+                <p>More details about the second slide.</p>
+              </div>
+            </div>
+          ),
+        },
+        {
+          id: "slide3",
+          content: (
+            <div>
+              <h2>Ryde Experiences - Slide 3</h2>
+              <p>This is the content of the third slide.</p>
+              <div className="additional-info">
+                <p>More details about the third slide.</p>
+              </div>
+            </div>
+          ),
+        },
+      ],
     },
   };
 
@@ -346,21 +684,31 @@ function App() {
           <div className="card">
             <h3>{content[openCard].title}</h3>
             <div className="content">
-              <div className="slide active">
-                <p>{content[openCard].slides[currentSlide]}</p>
-              </div>
+              {content[openCard].slides[currentSlide].content}
             </div>
             <div className="cardNavigation">
-              <button className="arrow up-arrow" onClick={() => navigateCard("up")}>
+              <button
+                className="arrow up-arrow"
+                onClick={() => navigateCard("up")}
+              >
                 ↑ for sections
               </button>
-              <button className="arrow down-arrow" onClick={() => navigateCard("down")}>
-                ↓ for sections
+              <button
+                className="arrow down-arrow"
+                onClick={() => navigateCard("down")}
+              >
+                ↓ for sections 
               </button>
-              <button className="arrow left-arrow" onClick={() => navigateCard("left")}>
+              <button
+                className="arrow left-arrow"
+                onClick={() => navigateCard("left")}
+              >
                 ← for sections
               </button>
-              <button className="arrow right-arrow" onClick={() => navigateCard("right")}>
+              <button
+                className="arrow right-arrow"
+                onClick={() => navigateCard("right")}
+              >
                 → for sections
               </button>
             </div>
