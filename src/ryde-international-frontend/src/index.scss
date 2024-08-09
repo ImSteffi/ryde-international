@@ -1,9 +1,9 @@
 /* Variables */
-$primary-color: #3498db;
-$secondary-color: #2980b9;
-$hover-color: #1abc9c;
-$text-color: #fff;
-$margin: 5px;
+$primary-color: #0F3B4E; /* Ryde Dark Blue */
+$secondary-color: #74AFAC; /* Ryde Blue */
+$text-color: #FBF5E5; /* Ryde White */
+$color-red: #CE653F; /* Ryde Red */
+$color-yellow: #d3462a; /* Ryde Yellow */
 $transition-duration: 0.5s;
 $transition-timing-function: ease;
 
@@ -39,11 +39,11 @@ html {
 }
 
 .section2 {
-  background-color: $secondary-color;
+  background-color: $primary-color;
 }
 
 .section3 {
-  background-color: lighten($primary-color, 10%);
+  background-color: $primary-color;
 }
 
 .section::before {
@@ -57,36 +57,34 @@ html {
   z-index: -1;
 }
 
+//////////////////////////////////////////////////////////////////////////////
+
 .contentDiv {
   flex: 1;
   height: 100%;
   position: relative;
   text-align: center;
-  background-color: darken($primary-color, 10%);
   border: 2px solid black;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color $transition-duration $transition-timing-function,
-    color $transition-duration $transition-timing-function,
-    padding $transition-duration $transition-timing-function,
-    opacity $transition-duration $transition-timing-function;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
 }
 
-.contentDiv h3 {
+.contentDiv > h3 {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -15%);
   margin: 0;
+  transition: top 0.3s ease;
 }
 
 .intoText {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
-  height: 100%;
   padding: 5%;
   display: flex;
   justify-content: center;
@@ -95,6 +93,9 @@ html {
   font-size: small;
   box-sizing: border-box;
   text-align: center;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .container .contentDiv {
@@ -112,20 +113,39 @@ html {
 }
 
 .container .contentDiv:hover > h3 {
-  top: 15%;
-  transition: top $transition-duration $transition-timing-function,
-    color $transition-duration $transition-timing-function,
-    padding $transition-duration $transition-timing-function,
-    opacity $transition-duration $transition-timing-function;
+  top: 10%;
+}
+
+.container .contentDiv:hover > div {
+  opacity: 1;
 }
 
 @media (max-width: 768px) {
   .contentDiv {
     opacity: 1;
   }
+
+  .intoText {
+    font-size: smaller;
+    padding: 5%;
+  }
+
+  .container .contentDiv:hover {
+    padding: 10%;
+  }
+
+  .container .contentDiv:not(.selected) {
+    opacity: 0.5;
+  }
+
+  .container .contentDiv.selected {
+    opacity: 1;
+  }
 }
 
-.cardOverlay {
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+.cardOverlay { // Black background
   position: fixed;
   top: 0;
   left: 0;
@@ -144,84 +164,94 @@ html {
   opacity: 1;
 }
 
+/////////////////////////////////////////////////////////////////////////////////////////// 
+
 .card {
-  height: 60%;
-  width: 70%;
+  width: 80%;
   max-width: 1200px;
-  background: white;
+  height: 80%;
+  max-height: 800px;
+  background: $color-yellow;
   padding: 20px;
-  margin: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
-// ------------------------------------------------------------------------------ //
+.content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 60%;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin: 10px 0;
+  font-size: 1.5em;
+}
+
+.additional-info {
+  margin-top: 10px;
+}
 
 .sliderContainer {
   position: relative;
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   overflow: hidden;
-}
-
-.slider {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  transition: transform $transition-duration $transition-timing-function;
 }
 
 .slide {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: opacity $transition-duration $transition-timing-function;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s ease;
+  padding: 20px;
+  box-sizing: border-box;
+  flex-direction: column;
 }
 
 .slide.active {
   opacity: 1;
 }
 
-.sliderButton {
-  background: none;
-  border: none;
-  color: $primary-color;
-  font-size: 2rem;
-  cursor: pointer;
-  transition: color $transition-duration $transition-timing-function;
+.slide:not(.active) {
+  opacity: 0;
 }
 
-.sliderButton:hover {
-  color: $hover-color;
-}
+////////////////////////////////////////////////////////////////////////////////////////
 
 .cardNavigation button {
-  padding: 0;
+  position: absolute;
   border: none;
   background: none;
   background-color: $primary-color;
   color: white;
   cursor: pointer;
   transition: background-color $transition-duration $transition-timing-function;
-}
-
-.cardNavigation button:hover {
-  background-color: $secondary-color;
 }
 
 .arrow {
@@ -232,16 +262,17 @@ html {
   font-size: 2vw;
   cursor: pointer;
   user-select: none;
-  position: absolute;
+  position: fixed;
   color: $primary-color;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1001;
 }
 
 .left-arrow {
   height: 100%;
-  left: 0;
+  left: 0; 
   top: 50%;
   transform: translateY(-50%);
 }
@@ -265,8 +296,4 @@ html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-}
-
-.arrow:hover {
-  color: $hover-color;
 }
