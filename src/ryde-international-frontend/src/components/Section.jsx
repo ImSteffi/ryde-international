@@ -29,6 +29,7 @@ const Section = ({
           onClick={() => handleClick(contentKey)}
         >
           <h3>{sectionContent[contentKey].title}</h3>
+          <div>{sectionContent[contentKey].image}</div>
           <div
             style={{ opacity: visibleSection === contentKey ? 1 : 0 }}
             className="intoText"

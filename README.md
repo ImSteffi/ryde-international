@@ -2,6 +2,7 @@ style  -
 <!-- diagonal sections -->
 hover transitions
 text highlighting
+3d elements
 
 Functions -
 Detect if the device is mobile or tablet

@@ -13,8 +13,8 @@ const Card = ({
 }) => {
   if (!openCard) return null;
 
-  const slides = content[openCard].slides; // content[ sec[]con[] ]
-
+  const slides = content[openCard].slides;
+  
   return (
     <div className="cardOverlay show" onClick={handleOutsideClick}>
       <div

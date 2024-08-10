@@ -136,6 +136,7 @@ function App() {
 
   return (
     <main className="container" onClick={handleOutsideClick}>
+      {content.backgroundImage}
       {sectionOrder.map((sections, index) => (
         <Section
           key={index}
