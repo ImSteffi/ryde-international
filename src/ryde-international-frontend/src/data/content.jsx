@@ -21,7 +21,7 @@ const content = {
           <div>
             <div className="slide-content slide1">
               <div className="slide1-content">
-                <h2 className="slide1-title">Our Founder</h2>
+                <h2 className="slide1-title">NATHAN WOODROW</h2>
                 <p className="slide1-text">
                   As the founder of Ryde International, I started this journey
                   with a vision to redefine the boundaries of global consulting.
@@ -45,18 +45,25 @@ const content = {
         id: "slide2",
         content: (
           <div className="slide-content slide2">
-            <div className="text-overlay">
+            <div className="slide2-header">
               <h2 className="slide-title">Innovation & Perseverance</h2>
               <p className="slide-text">
                 Over a decade of experience has taught us that innovation,
                 perseverance, and excellence are the keys to success.
               </p>
             </div>
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Innovation Image"
-              className="card-image"
-            />
+            <div className="slide2-main">
+              <img
+                src="media\images\nayth_innovation.jpg"
+                alt="Innovation Image"
+                className="card-image slide2-image"
+              />
+              <div className="floating-elements">
+                <div className="floating-box floating-box1"></div>
+                <div className="floating-box floating-box2"></div>
+                <div className="floating-box floating-box3"></div>
+              </div>
+            </div>
           </div>
         ),
       },
@@ -64,16 +71,24 @@ const content = {
         id: "slide3",
         content: (
           <div className="slide-content slide3">
-            <h2 className="slide-title">Excellence in Action</h2>
-            <p className="slide-text">
-              Every project we undertake is a testament to our commitment to
-              excellence.
-            </p>
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Founder Image"
-              className="card-image slide3-image"
-            />
+            <div className="slide3-header">
+              <h2 className="slide-title">Excellence in Action</h2>
+              <p className="slide-text">
+                Every project we undertake is a testament to our commitment to
+                excellence.
+              </p>
+            </div>
+            <div className="slide3-main">
+              <img
+                src="/media/images/sec2_con1_slide_1.jpg"
+                alt="Excellence Image"
+                className="card-image slide3-image"
+              />
+              <div className="badge-container">
+                <div className="badge">Award-Winning</div>
+                <div className="badge">Top Performance</div>
+              </div>
+            </div>
           </div>
         ),
       },
@@ -92,16 +107,32 @@ const content = {
         id: "slide1",
         content: (
           <div className="slide-content slide4">
-            <h2 className="slide-title">Collaboration at the Core</h2>
-            <p className="slide-text">
-              At Ryde International, collaboration isn't just a value—it's the
-              foundation of our success.
-            </p>
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Collaboration Image"
-              className="card-image slide4-image"
-            />
+            <div className="slide4-header">
+              <h2 className="slide-title">Collaboration at the Core</h2>
+            </div>
+            <div className="slide4-main">
+              <p className="slide-text">
+                At Ryde, we believe in leveraging community for sustainable
+                growth and resilience. Our regional focus is our strength.
+              </p>
+              <div className="key-points">
+                <div className="point">
+                  <div className="point-icon icon1"></div>
+                  <h3>Regional Strength</h3>
+                  <p>Community-driven, sustainable growth.</p>
+                </div>
+                <div className="point">
+                  <div className="point-icon icon2"></div>
+                  <h3>Community Connection</h3>
+                  <p>Thriving through collaboration.</p>
+                </div>
+                <div className="point">
+                  <div className="point-icon icon3"></div>
+                  <h3>Innovation & Resilience</h3>
+                  <p>Solving local problems with local solutions.</p>
+                </div>
+              </div>
+            </div>
           </div>
         ),
       },
@@ -124,6 +155,11 @@ const content = {
                   className="card-image slide5-image"
                 />
               </div>
+            </div>
+            <div className="floating-elements">
+              <div className="floating-cube"></div>
+              <div className="floating-sphere"></div>
+              <div className="floating-tetrahedron"></div>
             </div>
           </div>
         ),
@@ -148,6 +184,11 @@ const content = {
                 </p>
               </div>
             </div>
+            <div className="floating-elements">
+              <div className="floating-hexagon"></div>
+              <div className="floating-triangle"></div>
+              <div className="floating-ring"></div>
+            </div>
           </div>
         ),
       },
@@ -166,59 +207,94 @@ const content = {
         id: "slide1",
         content: (
           <div className="slide-content slide7">
-            <h2 className="slide-title">The Beginning</h2>
-            <p className="slide-text">
-              Our journey began with a simple idea: to understand and solve the
-              unique challenges of today's global market.
-            </p>
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Beginning Image"
-              className="card-image slide7-image"
-            />
-          </div>
+  <div className="beginning-container">
+    <div className="text-content">
+      <h2 className="slide-title">The Beginning</h2>
+      <p className="slide-text">
+        Our journey began with a simple idea: to understand and solve the unique challenges of today's global market.
+      </p>
+    </div>
+    <div className="image-content">
+      <img
+        src="/media/images/sec2_con1_slide_1.jpg"
+        alt="Beginning Image"
+        className="card-image slide7-image"
+      />
+    </div>
+  </div>
+  <div className="dynamic-layers">
+    <div className="layer layer1"></div>
+    <div className="layer layer2"></div>
+    <div className="layer layer3"></div>
+  </div>
+</div>
+
         ),
       },
       {
         id: "slide2",
         content: (
           <div className="slide-content slide8">
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Growth Image"
-              className="card-image slide8-image"
-            />
-            <div className="text-overlay">
-              <h2 className="slide-title">Growth & Expansion</h2>
-              <p className="slide-text">
-                From a small team to a global powerhouse, our growth story is a
-                testament to our vision and drive.
-              </p>
-            </div>
-          </div>
+  <div className="growth-expansion">
+    <div className="text-content">
+      <h2 className="slide-title">Growth & Expansion</h2>
+      <p className="slide-text">
+        From a small team to a global powerhouse, our growth story is a testament to our vision and drive.
+      </p>
+    </div>
+    <div className="image-container">
+      <img
+        src="/media/images/sec2_con1_slide_1.jpg"
+        alt="Growth Image"
+        className="card-image slide8-image"
+      />
+      <div className="growth-bars">
+        <div className="bar bar1"></div>
+        <div className="bar bar2"></div>
+        <div className="bar bar3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
         ),
       },
       {
         id: "slide3",
         content: (
           <div className="slide-content slide9">
-            <h2 className="slide-title">Our Vision Forward</h2>
-            <div className="slide9-content">
-              <p className="slide9-text">
-                As we look to the future, our vision remains clear: to lead the
-                way in global consulting, one partnership at a time.
-              </p>
-              <img
-                src="/media/images/sec2_con1_slide_1.jpg"
-                alt="Future Image"
-                className="card-image slide9-image"
-              />
-            </div>
-          </div>
+  <div className="vision-container">
+    <div className="vision-header">
+      <h2 className="vision-title">Our Vision Forward</h2>
+    </div>
+    <div className="vision-main">
+      <div className="vision-text-box">
+        <p className="vision-text">
+          As we look to the future, our vision remains clear: to lead the way in global consulting, one partnership at a time.
+        </p>
+      </div>
+      <div className="vision-image-box">
+        <img
+          src="/media/images/sec2_con1_slide_1.jpg"
+          alt="Future Image"
+          className="vision-image"
+        />
+      </div>
+    </div>
+    <div className="vision-elements">
+      <div className="vision-circle"></div>
+      <div className="vision-lines"></div>
+    </div>
+  </div>
+</div>
+
         ),
       },
     ],
   },
+
+
+  // without background, just floating elements.
   sec2con1: {
     title: "NWBrand",
     text: "Throughout my career, I have had the privilege of working with some of the most forward-thinking companies around the world. My work is centered on delivering actionable insights, sustainable growth strategies, and transformative solutions that empower businesses to succeed.",
@@ -379,6 +455,9 @@ const content = {
       },
     ],
   },
+
+
+
   sec3con1: {
     title: "Ryde Design",
     text: "At Ryde International, design is at the heart of everything we do. Our design philosophy is about creating solutions that are not only functional but also visually compelling. We believe that great design can transform businesses and create meaningful connections with customers.",

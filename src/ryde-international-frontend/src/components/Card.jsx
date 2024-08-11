@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 const Card = ({
   openCard,
@@ -14,7 +14,7 @@ const Card = ({
   if (!openCard) return null;
 
   const slides = content[openCard].slides;
-  
+
   return (
     <div className="cardOverlay show" onClick={handleOutsideClick}>
       <div
@@ -37,20 +37,45 @@ const Card = ({
             </div>
           ))}
         </div>
-        <div className="cardNavigation">
-          <button onClick={() => navigateCard("left")} className="left-arrow">
-            {"<"}
-          </button>
-          <button onClick={() => navigateCard("right")} className="right-arrow">
-            {">"}
-          </button>
-          <button onClick={() => navigateCard("up")} className="up-arrow">
-            {"^"}
-          </button>
-          <button onClick={() => navigateCard("down")} className="down-arrow">
-            {"v"}
-          </button>
-        </div>
+      </div>
+
+      <div className="cardNavigation">
+        <button
+          onClick={(event) => {
+            event.stopPropagation();
+            navigateCard("left");
+          }}
+          className="left-arrow"
+        >
+          {"<"}
+        </button>
+        <button
+          onClick={(event) => {
+            event.stopPropagation();
+            navigateCard("right");
+          }}
+          className="right-arrow"
+        >
+          {">"}
+        </button>
+        <button
+          onClick={(event) => {
+            event.stopPropagation();
+            navigateCard("up");
+          }}
+          className="up-arrow"
+        >
+          {"^"}
+        </button>
+        <button
+          onClick={(event) => {
+            event.stopPropagation();
+            navigateCard("down");
+          }}
+          className="down-arrow"
+        >
+          {"v"}
+        </button>
       </div>
     </div>
   );
