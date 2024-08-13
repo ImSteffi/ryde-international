@@ -18,8 +18,13 @@ const content = {
       {
         id: "slide1",
         content: (
-          <div>
-            <div className="slide-content slide1">
+          <div className="slide1-container">
+            <div className="slide1">
+              <img
+                src="/media/images/nayth_portrait.jpg"
+                alt="Excellence Image"
+                className="slide1-image"
+              />
               <div className="slide1-content">
                 <h2 className="slide1-title">NATHAN WOODROW</h2>
                 <p className="slide1-text">
@@ -27,16 +32,23 @@ const content = {
                   with a vision to redefine the boundaries of global consulting.
                 </p>
               </div>
-              <img
-                src="/media/images/sec2_con1_slide_1.jpg"
-                alt="Excellence Image"
-                className="card-image slide1-image"
-              />
             </div>
-            <div className="slide1-buttons">
-              <button>ACTION [ 1 ]</button>
-              <button>ACTION [ 2 ]</button>
-              <button>ACTION [ 3 ]</button>
+            <div className="banner">
+              <div className="banner-content">
+                <h2 className="banner-title">Title</h2>
+                <p className="banner-text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Praesent facilisis eros at justo vehicula, a gravida lacus
+                  condimentum.
+                </p>
+                <button className="banner-button">Learn More</button>
+              </div>
+              <div className="banner-image">
+                <img
+                  src="/media/images/sec2_con1_slide_1.jpg"
+                  alt="Banner Image"
+                />
+              </div>
             </div>
           </div>
         ),
@@ -207,94 +219,92 @@ const content = {
         id: "slide1",
         content: (
           <div className="slide-content slide7">
-  <div className="beginning-container">
-    <div className="text-content">
-      <h2 className="slide-title">The Beginning</h2>
-      <p className="slide-text">
-        Our journey began with a simple idea: to understand and solve the unique challenges of today's global market.
-      </p>
-    </div>
-    <div className="image-content">
-      <img
-        src="/media/images/sec2_con1_slide_1.jpg"
-        alt="Beginning Image"
-        className="card-image slide7-image"
-      />
-    </div>
-  </div>
-  <div className="dynamic-layers">
-    <div className="layer layer1"></div>
-    <div className="layer layer2"></div>
-    <div className="layer layer3"></div>
-  </div>
-</div>
-
+            <div className="beginning-container">
+              <div className="text-content">
+                <h2 className="slide-title">The Beginning</h2>
+                <p className="slide-text">
+                  Our journey began with a simple idea: to understand and solve
+                  the unique challenges of today's global market.
+                </p>
+              </div>
+              <div className="image-content">
+                <img
+                  src="/media/images/sec2_con1_slide_1.jpg"
+                  alt="Beginning Image"
+                  className="card-image slide7-image"
+                />
+              </div>
+            </div>
+            <div className="dynamic-layers">
+              <div className="layer layer1"></div>
+              <div className="layer layer2"></div>
+              <div className="layer layer3"></div>
+            </div>
+          </div>
         ),
       },
       {
         id: "slide2",
         content: (
           <div className="slide-content slide8">
-  <div className="growth-expansion">
-    <div className="text-content">
-      <h2 className="slide-title">Growth & Expansion</h2>
-      <p className="slide-text">
-        From a small team to a global powerhouse, our growth story is a testament to our vision and drive.
-      </p>
-    </div>
-    <div className="image-container">
-      <img
-        src="/media/images/sec2_con1_slide_1.jpg"
-        alt="Growth Image"
-        className="card-image slide8-image"
-      />
-      <div className="growth-bars">
-        <div className="bar bar1"></div>
-        <div className="bar bar2"></div>
-        <div className="bar bar3"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
+            <div className="growth-expansion">
+              <div className="text-content">
+                <h2 className="slide-title">Growth & Expansion</h2>
+                <p className="slide-text">
+                  From a small team to a global powerhouse, our growth story is
+                  a testament to our vision and drive.
+                </p>
+              </div>
+              <div className="image-container">
+                <img
+                  src="/media/images/sec2_con1_slide_1.jpg"
+                  alt="Growth Image"
+                  className="card-image slide8-image"
+                />
+                <div className="growth-bars">
+                  <div className="bar bar1"></div>
+                  <div className="bar bar2"></div>
+                  <div className="bar bar3"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         ),
       },
       {
         id: "slide3",
         content: (
           <div className="slide-content slide9">
-  <div className="vision-container">
-    <div className="vision-header">
-      <h2 className="vision-title">Our Vision Forward</h2>
-    </div>
-    <div className="vision-main">
-      <div className="vision-text-box">
-        <p className="vision-text">
-          As we look to the future, our vision remains clear: to lead the way in global consulting, one partnership at a time.
-        </p>
-      </div>
-      <div className="vision-image-box">
-        <img
-          src="/media/images/sec2_con1_slide_1.jpg"
-          alt="Future Image"
-          className="vision-image"
-        />
-      </div>
-    </div>
-    <div className="vision-elements">
-      <div className="vision-circle"></div>
-      <div className="vision-lines"></div>
-    </div>
-  </div>
-</div>
-
+            <div className="vision-container">
+              <div className="vision-header">
+                <h2 className="vision-title">Our Vision Forward</h2>
+              </div>
+              <div className="vision-main">
+                <div className="vision-text-box">
+                  <p className="vision-text">
+                    As we look to the future, our vision remains clear: to lead
+                    the way in global consulting, one partnership at a time.
+                  </p>
+                </div>
+                <div className="vision-image-box">
+                  <img
+                    src="/media/images/sec2_con1_slide_1.jpg"
+                    alt="Future Image"
+                    className="vision-image"
+                  />
+                </div>
+              </div>
+              <div className="vision-elements">
+                <div className="vision-circle"></div>
+                <div className="vision-lines"></div>
+              </div>
+            </div>
+          </div>
         ),
       },
     ],
   },
 
-
-  // without background, just floating elements.
   sec2con1: {
     title: "NWBrand",
     text: "Throughout my career, I have had the privilege of working with some of the most forward-thinking companies around the world. My work is centered on delivering actionable insights, sustainable growth strategies, and transformative solutions that empower businesses to succeed.",
@@ -307,35 +317,55 @@ const content = {
       {
         id: "slide1",
         content: (
-          <div className="slide-content slide1">
-            <h2 className="slide-title">Do One Thing, Do It Well</h2>
-            <p className="slide-text">
-              How you do one thing is how you do everything. This principle
-              guides every step of my journey.
-            </p>
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Focused Work"
-              className="card-image slide1-image"
-            />
+          <div className="slide-content slide10">
+            <div className="slide10-header">
+              <div className="slide10-title-wrapper">
+                <h2 className="slide10-title">A Philosophy of Consistency</h2>
+              </div>
+              <div className="slide10-subtext-wrapper">
+                <p className="slide10-subtext">
+                  The way you approach one task reflects how you approach all.
+                  This guiding principle shapes my every action and decision.
+                </p>
+              </div>
+            </div>
+            <div className="slide10-main">
+              <img
+                src="/media/images/sec2_con1_slide_1.jpg"
+                alt="Philosophy of Consistency"
+                className="slide10-image"
+              />
+            </div>
           </div>
         ),
       },
       {
         id: "slide2",
         content: (
-          <div className="slide-content slide2">
-            <img
-              src="/media/images/sec2_con1_slide_1.jpg"
-              alt="Purposeful Work"
-              className="card-image slide2-image"
-            />
-            <div className="text-overlay">
-              <h2 className="slide-title">Purposeful Work is Powerful</h2>
-              <p className="slide-text">
-                Hard work isn't always glamorous, but it’s the key to meaningful
-                growth. Embrace the grind, and see how it transforms you.
+          <div className="slide-content slide11">
+            <div className="slide11-title-wrapper">
+              <h2 className="slide11-title">Consistency in Every Step</h2>
+            </div>
+
+            <div className="slide11-subtext-wrapper">
+              <p className="slide11-subtext">
+                The way you approach one task defines how you approach
+                everything. This mindset guides every decision.
               </p>
+              <p className="slide11-subtext">
+                Purposeful actions create meaningful change, underpinning shifts
+                in understanding and belief.
+              </p>
+            </div>
+
+            <div className="slide11-main">
+              <img
+                src="/media/images/sec2_con1_slide_1.jpg"
+                alt="Consistency"
+                className="slide11-image"
+              />
+              <div className="floating-panel panel1"></div>
+              <div className="floating-panel panel2"></div>
             </div>
           </div>
         ),
@@ -455,8 +485,6 @@ const content = {
       },
     ],
   },
-
-
 
   sec3con1: {
     title: "Ryde Design",

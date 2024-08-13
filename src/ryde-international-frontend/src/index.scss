@@ -1,4 +1,3 @@
-/* Variables */
 $primary-color: #0F3B4E; /* Ryde Dark Blue */
 $secondary-color: #74AFAC; /* Ryde Blue */
 $color-white: #FBF5E5; /* Ryde White */
@@ -64,7 +63,7 @@ html {
   height: 100%;
   position: relative;
   text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.5s ease, color 0.5s ease, padding 0.5s ease, opacity 0.5s ease;
 }
 
 .contentDiv > h3 {
@@ -122,7 +121,7 @@ html {
 
 .container .contentDiv:hover {
   opacity: 1;
-  padding: 17.5%;
+  padding: 5%;
 }
 
 .container:hover .contentDiv:not(:hover) {
@@ -164,7 +163,7 @@ html {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-.cardOverlay { // Black background
+.cardOverlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -176,6 +175,7 @@ html {
   align-items: center;
   z-index: 1000;
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .cardOverlay.show {
@@ -200,7 +200,6 @@ html {
   border: none;
   color: $color-white;
   font-size: 2vw;
-  padding: 1%;
   cursor: pointer;
   user-select: none;
   z-index: 1002;
@@ -240,34 +239,27 @@ html {
 /////////////////////////////////////////////////////////////////////////////////////////// 
 
 .card {
-  width: 80%;
+  width: 100vw;
+  height: 100vh; 
   max-width: 1200px;
-  height: 80%;
   max-height: 800px;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
   position: relative;
-  background: none;
-  perspective: 1000px; /* Add perspective here */
+  background: transparent;
+  pointer-events: none;
 }
 
-.content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.card * {
+  pointer-events: all;
 }
 
-.card-header > h2 {
-  font-size: 2em;
+.card-header {
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-50%, -50%);
   color: $color-white;
-  margin-bottom: 10px;
+  text-align: center;
+  z-index: 1;
 }
 
 //////////////////////////////////////////////////////////////////////////////////
@@ -279,54 +271,106 @@ html {
 }
 
 .slide {
-  width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   position: absolute;
   transition: transform 0.5s ease, opacity 0.5s ease;
-  flex-direction: column;
   backface-visibility: hidden;
-  transform: rotateY(0deg);
 }
 
 .slide.active {
   opacity: 1;
-  transform: rotateY(0deg);
 }
 
 .slide:not(.active) {
   opacity: 0;
-  transform: rotateY(-10deg);
 }
-
 
 ////////////////////////////////////////
 
+.slide1, .banner {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.banner {
+  transform: translateX(100%);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 .slide1 {
-  width: 95%;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: relative;
+  animation: slideInFromLeft 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.banner {
+  animation: slideInFromRight 1s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation-delay: 1s;
+}
+
+.slide1-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.slide1 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   background-color: $color-red;
   border-radius: 12px;
 }
 
 .slide1-image {
-  width: 42%;
+  width: 32%;
   height: auto;
   object-fit: cover;
   border-radius: 12px;
   box-shadow: 0 1px 8px #191919, 0 3px 12px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
   position: absolute;
-  top: 20%;
-  right: -5%;
+  top: -20px;
+  left: -10px;
+  z-index: 2;
   transform: translateZ(60px);
 }
 
 .slide1-content {
   z-index: 1;
-  padding: 5%;
-  width: 50%;
+  padding: 4%;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .slide1-title {
@@ -338,33 +382,62 @@ html {
 .slide1-text {
   font-size: 1.25em;
   color: $color-white;
-  max-width: 70%;
+  max-width: 100%;
 }
 
-.slide1-buttons {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
+.banner {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 0 5%;
+  height: 300px; 
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
 }
 
-.slide1-buttons button {
-  width: 30%;
-  height: 90px;
-  background-color: $secondary-color;
-  border: none;
-  color: $color-white;
-  font-size: 1.2em;
-  border-radius: 6px;
+.banner-content {
+  width: 50%;
+  padding: 40px;
+  background-color: $color-white;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
+.banner-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #333; 
+  margin-bottom: 20px;
+}
+
+.banner-text {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.banner-button {
+  background-color: $primary-color;
+  color: $color-white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1em;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s;
+}
+
+.banner-image {
+  width: 50%;
+  height: 100%;
+}
+
+.banner-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 12px 12px 0;
+}
 
 //////////////////////////////////////
 
@@ -460,7 +533,7 @@ html {
 ////////////////////////////
 
 .slide3 {
-  background: linear-gradient(135deg, $color-yellow 50%, $secondary-color 50%);
+  background: linear-gradient(25deg, $color-yellow 50%, $secondary-color 50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -504,7 +577,7 @@ html {
 }
 
 .slide3 .slide3-image:hover {
-  transform: scale(1.05); /* Subtle zoom effect on hover */
+  transform: scale(1.05); 
 }
 
 .badge-container {
@@ -1204,3 +1277,325 @@ html {
     transform: translateX(100%);
   }
 }
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+.slide10 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: 1000px;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.slide10-header {
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.slide10-title-wrapper {
+  transform-style: preserve-3d;
+  transform: translateZ(80px);
+  animation: titleFloat 6s ease-in-out infinite;
+}
+
+.slide10-title {
+  font-size: 2.5em;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slide10-subtext-wrapper {
+  margin-top: 10px;
+  transform-style: preserve-3d;
+  transform: translateZ(60px);
+  animation: subtextFloat 6s ease-in-out infinite alternate;
+}
+
+.slide10-subtext {
+  font-size: 1.2em;
+  color: $secondary-color;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.slide10-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.slide10-image {
+  width: 60%;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  transform: translateZ(40px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide10-image:hover {
+  transform: translateZ(70px) scale(1.05);
+}
+
+@keyframes titleFloat {
+  0%, 100% {
+    transform: translateZ(80px) translateY(0);
+  }
+  50% {
+    transform: translateZ(80px) translateY(-10px);
+  }
+}
+
+@keyframes subtextFloat {
+  0%, 100% {
+    transform: translateZ(60px) translateY(0);
+  }
+  50% {
+    transform: translateZ(60px) translateY(-5px);
+  }
+}
+
+
+/////////////////////////
+
+
+.slide11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: 1000px;
+  padding: 40px;
+  overflow: hidden;
+}
+
+.floating-panels {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.slide11-title-panel, .slide11-subtext-panel {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  animation: panelFloat 6s ease-in-out infinite alternate;
+}
+
+.slide11-title {
+  font-size: 2.5em;
+  color: $primary-color;
+  text-transform: uppercase;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.slide11-subtext {
+  font-size: 1.2em;
+  color: $secondary-color;
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+}
+
+.slide11-main {
+  position: relative;
+  transform-style: preserve-3d;
+  margin-top: 40px;
+}
+
+.slide11-image {
+  width: 60%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateZ(50px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide11-image:hover {
+  transform: translateZ(80px) scale(1.05);
+}
+
+.floating-shapes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  transform-style: preserve-3d;
+}
+
+.floating-shape {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform-style: preserve-3d;
+  animation: shapeFloat 10s infinite ease-in-out;
+}
+
+.floating-cube {
+  width: 100px;
+  height: 100px;
+  top: 15%;
+  left: 20%;
+  transform: translateZ(-100px) rotateX(30deg) rotateY(45deg);
+}
+
+.floating-sphere {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  right: 15%;
+  top: 40%;
+  transform: translateZ(-80px);
+}
+
+.floating-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 5px solid $primary-color;
+  bottom: 20%;
+  left: 25%;
+  transform: translateZ(-120px) rotate(45deg);
+}
+
+@keyframes panelFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes shapeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+////////////////////////////////////
+
+
+.slide11 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 50px;
+  text-align: center;
+  background: none;
+  perspective: 1000px;
+}
+
+.slide11-title-wrapper {
+  margin-bottom: 30px;
+  transform: translateZ(50px);
+  animation: floatEffect 6s ease-in-out infinite alternate;
+}
+
+.slide11-title {
+  font-size: 2.8em;
+  color: $primary-color;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.slide11-subtext-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.slide11-subtext {
+  font-size: 1.3em;
+  color: $secondary-color;
+  transform: translateZ(30px);
+  animation: floatEffect 8s ease-in-out infinite alternate-reverse;
+}
+
+.slide11-main {
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.slide11-image {
+  width: 50%;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: translateZ(20px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide11-image:hover {
+  transform: translateZ(40px) scale(1.05);
+}
+
+.floating-panel {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  animation: floatEffectPanels 10s infinite ease-in-out;
+}
+
+.panel1 {
+  top: -30px;
+  left: -60px;
+  transform: translateZ(10px) rotate(-10deg);
+}
+
+.panel2 {
+  bottom: -50px;
+  right: -80px;
+  transform: translateZ(15px) rotate(15deg);
+}
+
+@keyframes floatEffect {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes floatEffectPanels {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+ 

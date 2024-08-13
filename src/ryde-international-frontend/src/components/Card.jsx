@@ -24,15 +24,15 @@ const Card = ({
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        <div className="card-header">
-          <h2>{content[openCard].title}</h2>
-        </div>
         <div className="sliderContainer">
           {slides.map((slide, index) => (
             <div
               key={slide.id}
               className={`slide ${index === currentSlide ? "active" : ""}`}
             >
+              <div className="card-header">
+                <h2>{content[openCard].title}</h2>
+              </div>
               {slide.content}
             </div>
           ))}
