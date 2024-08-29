@@ -18,92 +18,50 @@ const content = {
       {
         id: "slide1",
         content: (
-          <div className="slide1-container">
-            <div className="slide1">
-              <img
-                src="/media/images/nayth_portrait.jpg"
-                alt="Excellence Image"
-                className="slide1-image"
-              />
-              <div className="slide1-content">
-                <h2 className="slide1-title">NATHAN WOODROW</h2>
-                <p className="slide1-text">
-                  As the founder of Ryde International, I started this journey
-                  with a vision to redefine the boundaries of global consulting.
-                </p>
-              </div>
+          <div className="slide1">
+            <img
+              src="/media/images/low-resolution.png"
+              alt="Consistency"
+              className="slide1-portrait"
+            />
+            <img
+              src="/media/images/water-image.png"
+              alt="Consistency"
+              className="slide1-water-image"
+            />
+            <div className="slide1-title">
+              <h1>Nathan Woodrow</h1>
             </div>
-            <div className="banner">
-              <div className="banner-content">
-                <h2 className="banner-title">Title</h2>
-                <p className="banner-text">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Praesent facilisis eros at justo vehicula, a gravida lacus
-                  condimentum.
-                </p>
-                <button className="banner-button">Learn More</button>
-              </div>
-              <div className="banner-image">
-                <img
-                  src="/media/images/sec2_con1_slide_1.jpg"
-                  alt="Banner Image"
-                />
-              </div>
-            </div>
-          </div>
-        ),
-      },
-      {
-        id: "slide2",
-        content: (
-          <div className="slide-content slide2">
-            <div className="slide2-header">
-              <h2 className="slide-title">Innovation & Perseverance</h2>
-              <p className="slide-text">
-                Over a decade of experience has taught us that innovation,
-                perseverance, and excellence are the keys to success.
+            <div className="slide1-text">
+              <p>
+                Nayth Woodrow founded Ryde International with the belief that
+                growing up doesn’t mean growing old. His journey from the
+                Riverland to a global community is driven by passion, purpose,
+                and the power of storytelling
               </p>
             </div>
-            <div className="slide2-main">
-              <img
-                src="media\images\nayth_innovation.jpg"
-                alt="Innovation Image"
-                className="card-image slide2-image"
-              />
-              <div className="floating-elements">
-                <div className="floating-box floating-box1"></div>
-                <div className="floating-box floating-box2"></div>
-                <div className="floating-box floating-box3"></div>
-              </div>
+            <div className="slide1-tagline">
+              <p>The way you do one thing is the way you do everything</p>
             </div>
           </div>
         ),
       },
-      {
-        id: "slide3",
-        content: (
-          <div className="slide-content slide3">
-            <div className="slide3-header">
-              <h2 className="slide-title">Excellence in Action</h2>
-              <p className="slide-text">
-                Every project we undertake is a testament to our commitment to
-                excellence.
-              </p>
-            </div>
-            <div className="slide3-main">
-              <img
-                src="/media/images/sec2_con1_slide_1.jpg"
-                alt="Excellence Image"
-                className="card-image slide3-image"
-              />
-              <div className="badge-container">
-                <div className="badge">Award-Winning</div>
-                <div className="badge">Top Performance</div>
-              </div>
-            </div>
-          </div>
-        ),
-      },
+      // {
+      //   id: "slide2",
+      //   content: (
+      //     <div className="slide2">
+
+      //     </div>
+      //   ),
+      // },
+      // {
+      //   id: "slide3",
+      //   content: (
+      //     <div className="slide3">
+
+      //     </div>
+      //   ),
+      // },
     ],
   },
   sec1con2: {
