@@ -2,12 +2,14 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import content from "./data/content.jsx";
 import Section from "./components/Section.jsx";
 import Card from "./components/Card.jsx";
+import Loading from "./components/Loading.jsx";
 
 function App() {
   const [visibleSection, setVisibleSection] = useState(null);
   const [openCard, setOpenCard] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [loadingComplete, setLoadingComplete] = useState(false);
   const canSwitchSlide = useRef(true);
   const touchStartY = useRef(0);
   const touchEndY = useRef(0);
@@ -66,7 +68,7 @@ function App() {
 
     if (direction === "down" && currentSlide < slides.length - 1) {
       setCurrentSlide((prev) => prev + 1);
-    } else if (direction === "up" && currentSlide > 0) {
+    } else if ( direction === "up" && currentSlide > 0) {
       setCurrentSlide((prev) => prev - 1);
     }
 
@@ -133,6 +135,10 @@ function App() {
     setOpenCard(flatSections[newIndex]);
     setCurrentSlide(0);
   };
+
+  if (!loadingComplete) {
+    return <Loading onComplete={() => setLoadingComplete(true)} />;
+  }
 
   return (
     <main className="container" onClick={handleOutsideClick}>

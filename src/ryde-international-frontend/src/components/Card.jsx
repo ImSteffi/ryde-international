@@ -17,7 +17,6 @@ const Card = ({
 
   return (
     <div className="cardOverlay show" onClick={handleOutsideClick}>
-      {/* TODO - fix scrolling outside of card and insdie the card */}
       <div
         className="card"
         onWheel={handleScroll}

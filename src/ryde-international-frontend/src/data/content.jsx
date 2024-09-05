@@ -19,16 +19,13 @@ const content = {
         id: "slide1",
         content: (
           <div className="slide1">
-            <img
-              src="/media/images/low-resolution.png"
-              alt="Consistency"
-              className="slide1-portrait"
-            />
-            <img
-              src="/media/images/water-image.png"
-              alt="Consistency"
-              className="slide1-water-image"
-            />
+            <div className="slide1-image-div">
+              <img
+                src="/media/images/low-resolution.png"
+                alt="Consistency"
+                className="slide1-image"
+              />
+            </div>
             <div className="slide1-title">
               <h1>Nathan Woodrow</h1>
             </div>

@@ -2,6 +2,7 @@
 .vscode/
 .idea/
 **/*~
+TODO.md
 
 # Mac OSX temporary files
 .DS_Store
