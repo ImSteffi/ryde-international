@@ -43,14 +43,30 @@ const content = {
           </div>
         ),
       },
-      // {
-      //   id: "slide2",
-      //   content: (
-      //     <div className="slide2">
-
-      //     </div>
-      //   ),
-      // },
+      {
+        id: "slide2",
+        content: (
+          <div className="slide2">
+            <div className="slide2-text">
+              <p>
+                A profoundly impactful thinker and storyteller, possessing the
+                capacity to engage, connect and influence.
+              </p>
+              <br></br>
+              <p>
+                Nayth Woodrow founded Ryde out of a passion for growing
+                something from nothing. Having grown Ryde International into a
+                global community across seven business units.
+              </p>
+              <br></br>
+              <p>
+                Nayth is now driven to share his learning and experience, along
+                with his passion for purpose with the Ryde Community.
+              </p>
+            </div>
+          </div>
+        ),
+      },
       // {
       //   id: "slide3",
       //   content: (
@@ -71,93 +87,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div className="slide-content slide4">
-            <div className="slide4-header">
-              <h2 className="slide-title">Collaboration at the Core</h2>
-            </div>
-            <div className="slide4-main">
-              <p className="slide-text">
-                At Ryde, we believe in leveraging community for sustainable
-                growth and resilience. Our regional focus is our strength.
-              </p>
-              <div className="key-points">
-                <div className="point">
-                  <div className="point-icon icon1"></div>
-                  <h3>Regional Strength</h3>
-                  <p>Community-driven, sustainable growth.</p>
-                </div>
-                <div className="point">
-                  <div className="point-icon icon2"></div>
-                  <h3>Community Connection</h3>
-                  <p>Thriving through collaboration.</p>
-                </div>
-                <div className="point">
-                  <div className="point-icon icon3"></div>
-                  <h3>Innovation & Resilience</h3>
-                  <p>Solving local problems with local solutions.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        ),
+        id: "slide4",
+        content: <div className="slide4"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div className="slide-content slide5">
-            <div className="integrity-container">
-              <div className="text-content">
-                <h2 className="slide-title">Integrity Above All</h2>
-                <p className="slide-text">
-                  Integrity guides our actions, ensuring that we always do
-                  what's right for our clients and our community.
-                </p>
-              </div>
-              <div className="image-content">
-                <img
-                  src="/media/images/sec2_con1_slide_1.jpg"
-                  alt="Integrity Image"
-                  className="card-image slide5-image"
-                />
-              </div>
-            </div>
-            <div className="floating-elements">
-              <div className="floating-cube"></div>
-              <div className="floating-sphere"></div>
-              <div className="floating-tetrahedron"></div>
-            </div>
-          </div>
-        ),
+        id: "slide5",
+        content: <div className="slide5"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div className="slide-content slide6">
-            <div className="innovation-container">
-              <div className="image-content">
-                <img
-                  src="/media/images/sec2_con1_slide_1.jpg"
-                  alt="Innovation Image"
-                  className="card-image slide6-image"
-                />
-              </div>
-              <div className="text-content">
-                <h2 className="slide-title">Innovation Drives Us</h2>
-                <p className="slide-text">
-                  We constantly innovate to bring fresh, impactful solutions to
-                  our clients' most pressing challenges.
-                </p>
-              </div>
-            </div>
-            <div className="floating-elements">
-              <div className="floating-hexagon"></div>
-              <div className="floating-triangle"></div>
-              <div className="floating-ring"></div>
-            </div>
-          </div>
-        ),
+        id: "slide6",
+        content: <div className="slide6"></div>,
       },
     ],
   },
@@ -171,91 +110,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div className="slide-content slide7">
-            <div className="beginning-container">
-              <div className="text-content">
-                <h2 className="slide-title">The Beginning</h2>
-                <p className="slide-text">
-                  Our journey began with a simple idea: to understand and solve
-                  the unique challenges of today's global market.
-                </p>
-              </div>
-              <div className="image-content">
-                <img
-                  src="/media/images/sec2_con1_slide_1.jpg"
-                  alt="Beginning Image"
-                  className="card-image slide7-image"
-                />
-              </div>
-            </div>
-            <div className="dynamic-layers">
-              <div className="layer layer1"></div>
-              <div className="layer layer2"></div>
-              <div className="layer layer3"></div>
-            </div>
-          </div>
-        ),
+        id: "slide7",
+        content: <div className="slide7"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div className="slide-content slide8">
-            <div className="growth-expansion">
-              <div className="text-content">
-                <h2 className="slide-title">Growth & Expansion</h2>
-                <p className="slide-text">
-                  From a small team to a global powerhouse, our growth story is
-                  a testament to our vision and drive.
-                </p>
-              </div>
-              <div className="image-container">
-                <img
-                  src="/media/images/sec2_con1_slide_1.jpg"
-                  alt="Growth Image"
-                  className="card-image slide8-image"
-                />
-                <div className="growth-bars">
-                  <div className="bar bar1"></div>
-                  <div className="bar bar2"></div>
-                  <div className="bar bar3"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        ),
+        id: "slide8",
+        content: <div className="slide8"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div className="slide-content slide9">
-            <div className="vision-container">
-              <div className="vision-header">
-                <h2 className="vision-title">Our Vision Forward</h2>
-              </div>
-              <div className="vision-main">
-                <div className="vision-text-box">
-                  <p className="vision-text">
-                    As we look to the future, our vision remains clear: to lead
-                    the way in global consulting, one partnership at a time.
-                  </p>
-                </div>
-                <div className="vision-image-box">
-                  <img
-                    src="/media/images/sec2_con1_slide_1.jpg"
-                    alt="Future Image"
-                    className="vision-image"
-                  />
-                </div>
-              </div>
-              <div className="vision-elements">
-                <div className="vision-circle"></div>
-                <div className="vision-lines"></div>
-              </div>
-            </div>
-          </div>
-        ),
+        id: "slide9",
+        content: <div className="slide9"></div>,
       },
     ],
   },
@@ -270,24 +134,51 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
+        id: "slide10",
         content: (
-          <div className="slide-content slide10">
-            <div className="slide10-header">
-              <div className="slide10-title-wrapper">
-                <h2 className="slide10-title">A Philosophy of Consistency</h2>
-              </div>
-              <div className="slide10-subtext-wrapper">
-                <p className="slide10-subtext">
-                  The way you approach one task reflects how you approach all.
-                  This guiding principle shapes my every action and decision.
-                </p>
-              </div>
-            </div>
-            <div className="slide10-main">
+          <div className="slide10">
+            <div className="slide1-image-div">
               <img
-                src="/media/images/sec2_con1_slide_1.jpg"
-                alt="Philosophy of Consistency"
+                src="/media/images/NWBrand.jpg"
+                alt="NWBrand_image"
+                className="slide10-image"
+              />
+            </div>
+            <div className="slide10-tags">
+              <p>
+                I believe in <span>disruption</span>
+              </p>
+              <p>
+                I believe in <span>honesty</span>
+              </p>
+              <p>
+                I believe that <span>the work tells a story</span>
+              </p>
+            </div>
+          </div>
+        ),
+      },
+      {
+        id: "slide11",
+        content: (
+          <div className="slide11">
+            <div className="slide11-text">
+              <p>
+                The NWBrand is designed to resist the notion that hard work
+                isn’t sexy work. In our society, there is a level of
+                misconception which drives the idea that as individuals we
+                should choose to be one thing, often via the path of least
+                resistance: <span>I don’t agree.</span>
+                <br></br>I believe that purposeful work leads to rich moments,
+                and that these moments underpin shifts in knowledge,
+                understanding, capacity and beliefs which are both permanent and
+                powerful.
+              </p>
+            </div>
+            <div className="slide11-image">
+              <img
+                src="/media/images/nayth_in_action.jpg"
+                alt="NWBrand_image"
                 className="slide10-image"
               />
             </div>
@@ -295,51 +186,36 @@ const content = {
         ),
       },
       {
-        id: "slide2",
+        id: "slide12",
         content: (
-          <div className="slide-content slide11">
-            <div className="slide11-title-wrapper">
-              <h2 className="slide11-title">Consistency in Every Step</h2>
-            </div>
-
-            <div className="slide11-subtext-wrapper">
-              <p className="slide11-subtext">
-                The way you approach one task defines how you approach
-                everything. This mindset guides every decision.
-              </p>
-              <p className="slide11-subtext">
-                Purposeful actions create meaningful change, underpinning shifts
-                in understanding and belief.
+          <div className="slide12">
+            <h1>How we can Work Together</h1>
+            <div className="slide12-sec1">
+              <h2>Storytelling</h2>
+              <p>
+                the opportunity for Nayth to speak with your school, team, club,
+                business or organisation about some of the things that have
+                driven his passion for purpose throughout his journey.
               </p>
             </div>
-
-            <div className="slide11-main">
-              <img
-                src="/media/images/sec2_con1_slide_1.jpg"
-                alt="Consistency"
-                className="slide11-image"
-              />
-              <div className="floating-panel panel1"></div>
-              <div className="floating-panel panel2"></div>
-            </div>
-          </div>
-        ),
-      },
-      {
-        id: "slide3",
-        content: (
-          <div className="slide-content slide3">
-            <h2 className="slide-title">Let’s Collaborate</h2>
-            <div className="slide3-content">
-              <p className="slide-text">
-                Whether it's storytelling or sparking innovation, together we
-                can create something extraordinary.
+            <div className="slide12-sec2">
+              <h2>Growing Something from Nothing Program (GSFNP)</h2>
+              <p>
+                the GSFNP is designed to spark curiosity in young minds about
+                excellence and innovation, and the role defining purpose can
+                play in leading and impacting a community. The vehicle for this
+                may be entrepreneurship but the GSFNP isn’t about business, it's
+                about students understanding how the foundational elements of
+                effectiveness can be applied in everyday life. The way you do
+                one thing is the way you do everything.
               </p>
-              <img
-                src="/media/images/sec2_con1_slide_1.jpg"
-                alt="Collaboration"
-                className="card-image slide3-image"
-              />
+            </div>
+            <div className="slide12-sec3">
+              <h2>What do you actually do?</h2>
+              <p>
+                filtering and decision making through your Just Cause
+                Storytelling to engage, connect and inspire
+              </p>
             </div>
           </div>
         ),
@@ -356,40 +232,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div>
-            <h2>What Do We Do - Slide 1</h2>
-            <p>This is the content of the first slide.</p>
-            <div className="additional-info">
-              <p>More details about the first slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide13",
+        content: <div className="slide13"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div>
-            <h2>What Do We Do - Slide 2</h2>
-            <p>This is the content of the second slide.</p>
-            <div className="additional-info">
-              <p>More details about the second slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide14",
+        content: <div className="slide14"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div>
-            <h2>What Do We Do - Slide 3</h2>
-            <p>This is the content of the third slide.</p>
-            <div className="additional-info">
-              <p>More details about the third slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide15",
+        content: <div className="slide15"></div>,
       },
     ],
   },
@@ -403,40 +255,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div>
-            <h2>Who I've Worked With - Slide 1</h2>
-            <p>This is the content of the first slide.</p>
-            <div className="additional-info">
-              <p>More details about the first slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide16",
+        content: <div className="slide16"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div>
-            <h2>Who I've Worked With - Slide 2</h2>
-            <p>This is the content of the second slide.</p>
-            <div className="additional-info">
-              <p>More details about the second slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide17",
+        content: <div className="slide17"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div>
-            <h2>Who I've Worked With - Slide 3</h2>
-            <p>This is the content of the third slide.</p>
-            <div className="additional-info">
-              <p>More details about the third slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide18",
+        content: <div className="slide18"></div>,
       },
     ],
   },
@@ -451,40 +279,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div>
-            <h2>Ryde Design - Slide 1</h2>
-            <p>This is the content of the first slide.</p>
-            <div className="additional-info">
-              <p>More details about the first slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide19",
+        content: <div className="slide19"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div>
-            <h2>Ryde Design - Slide 2</h2>
-            <p>This is the content of the second slide.</p>
-            <div className="additional-info">
-              <p>More details about the second slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide20",
+        content: <div className="slide20"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div>
-            <h2>Ryde Design - Slide 3</h2>
-            <p>This is the content of the third slide.</p>
-            <div className="additional-info">
-              <p>More details about the third slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide21",
+        content: <div className="slide21"></div>,
       },
     ],
   },
@@ -498,40 +302,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div>
-            <h2>Ryde Growth - Slide 1</h2>
-            <p>This is the content of the first slide.</p>
-            <div className="additional-info">
-              <p>More details about the first slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide22",
+        content: <div className="slide22"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div>
-            <h2>Ryde Growth - Slide 2</h2>
-            <p>This is the content of the second slide.</p>
-            <div className="additional-info">
-              <p>More details about the second slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide23",
+        content: <div className="slide23"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div>
-            <h2>Ryde Growth - Slide 3</h2>
-            <p>This is the content of the third slide.</p>
-            <div className="additional-info">
-              <p>More details about the third slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide24",
+        content: <div className="slide24"></div>,
       },
     ],
   },
@@ -545,40 +325,16 @@ const content = {
     ),
     slides: [
       {
-        id: "slide1",
-        content: (
-          <div>
-            <h2>Ryde Experiences - Slide 1</h2>
-            <p>This is the content of the first slide.</p>
-            <div className="additional-info">
-              <p>More details about the first slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide25",
+        content: <div className="slide25"></div>,
       },
       {
-        id: "slide2",
-        content: (
-          <div>
-            <h2>Ryde Experiences - Slide 2</h2>
-            <p>This is the content of the second slide.</p>
-            <div className="additional-info">
-              <p>More details about the second slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide26",
+        content: <div className="slide26"></div>,
       },
       {
-        id: "slide3",
-        content: (
-          <div>
-            <h2>Ryde Experiences - Slide 3</h2>
-            <p>This is the content of the third slide.</p>
-            <div className="additional-info">
-              <p>More details about the third slide.</p>
-            </div>
-          </div>
-        ),
+        id: "slide27",
+        content: <div className="slide27"></div>,
       },
     ],
   },

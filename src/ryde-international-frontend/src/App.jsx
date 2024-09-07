@@ -136,9 +136,9 @@ function App() {
     setCurrentSlide(0);
   };
 
-  if (!loadingComplete) {
-    return <Loading onComplete={() => setLoadingComplete(true)} />;
-  }
+  // if (!loadingComplete) {
+  //   return <Loading onComplete={() => setLoadingComplete(true)} />;
+  // }
 
   return (
     <main className="container" onClick={handleOutsideClick}>
