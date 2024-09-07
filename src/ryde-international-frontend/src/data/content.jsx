@@ -21,7 +21,7 @@ const content = {
           <div className="slide1">
             <div className="slide1-image-div">
               <img
-                src="/media/images/low-resolution.png"
+                src="/media/images/nayth_portrait.jpg"
                 alt="Consistency"
                 className="slide1-image"
               />
@@ -303,15 +303,47 @@ const content = {
     slides: [
       {
         id: "slide22",
-        content: <div className="slide22"></div>,
+        content: (
+          <div className="slide22">
+            <p>
+              Helping to bring your purpose to life in a tangible way, to drive
+              more effective leadership, sustainability in your company or team.
+            </p>
+          </div>
+        ),
       },
       {
         id: "slide23",
-        content: <div className="slide23"></div>,
+        content: (
+          <div className="slide23">
+            <p>
+              What do you DO? The research and data tells us that by you AND you
+              team being clear on your corporate purpose, values and standards
+              and knowinig how to connect there talents, skillsets and purpose
+              with the companies is how we drive effective outcomes.{" "}
+            </p>
+          </div>
+        ),
       },
       {
         id: "slide24",
-        content: <div className="slide24"></div>,
+        content: (
+          <div className="slide24">
+            <p>
+              The work we do together...can be done in person or remotely. What
+              you would be looking to engage Ryde Growth for is the development
+              of key strategic information for you, your team, club or
+              organisation. This may take the form of a Strategic Plan, Just
+              Cause [capturing your purpose, values and targets], Workforce
+              Management Strategy [capturing organisational growth and the
+              necessary resourcing], Messaging Strategy [what you say and how
+              you say it], or other pieces of critical work that we co-develop
+              together. The Ryde Growth team specialises in the work of
+              identifying potential performance gaps within your organisation,
+              and developing appropriate next steps to address them.
+            </p>
+          </div>
+        ),
       },
     ],
   },

@@ -7,22 +7,22 @@ $transition-duration: 6s;
 $transition-timing-function: ease;
 
 @font-face {
-  font-family: 'Effra';
-  src: url('./fonts/Effra_Trial_Bd.ttf') format('truetype');
+  font-family: "Effra";
+  src: url("./fonts/Effra_Trial_Bd.ttf") format("truetype");
   font-weight: 700; /* Bold */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Effra';
-  src: url('./fonts/Effra_Trial_Rg.ttf') format('truetype');
+  font-family: "Effra";
+  src: url("./fonts/Effra_Trial_Rg.ttf") format("truetype");
   font-weight: 400; /* Regular */
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Effra';
-  src: url('./fonts/Effra_Trial_Lt.ttf') format('truetype');
+  font-family: "Effra";
+  src: url("./fonts/Effra_Trial_Lt.ttf") format("truetype");
   font-weight: 300; /* Light */
   font-style: normal;
 }
@@ -31,7 +31,8 @@ $transition-timing-function: ease;
   box-sizing: border-box;
 }
 
-h1, p {
+h1,
+p {
   margin: 0;
 }
 
@@ -157,7 +158,7 @@ html {
 }
 
 .contentDiv h3 {
-  font-family: 'Effra-Bold';
+  font-family: "Effra-Bold";
   color: #ffffff;
   position: absolute;
   top: 40%;
@@ -168,7 +169,7 @@ html {
 }
 
 .card-title {
-  font-family: 'Effra', sans-serif;
+  font-family: "Effra", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -371,7 +372,7 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   border-radius: 12px;
@@ -379,12 +380,10 @@ html {
 }
 
 .slide1-image-div {
-  background-color: $color-yellow;
   width: 100%;
   max-width: 400px;
   display: flex;
   justify-content: center;
-  border: 5px solid $color-white;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
@@ -417,13 +416,11 @@ html {
   color: $color-white;
 }
 
-.slide1-tagline {
+.slide1-tagline p {
   text-align: center;
-  font-size: 1.5rem; 
+  font-size: 1.5rem;
   color: $color-yellow;
-  margin-top: auto; 
 }
-
 
 //////////////////////////////////////
 
@@ -433,7 +430,7 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   border-radius: 12px;
@@ -452,7 +449,7 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-    align-items: center;
+  align-items: center;
   box-sizing: border-box;
   border-radius: 12px;
   padding: 20px;
@@ -489,7 +486,7 @@ html {
 }
 
 .slide10-tags span {
- color: $color-yellow;
+  color: $color-yellow;
 }
 
 //////////////////////////////////////
@@ -500,7 +497,7 @@ html {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; 
+  justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   border-radius: 12px;
@@ -536,7 +533,72 @@ html {
   margin: 0;
 }
 
-.slide12-sec1, .slide12-sec2, .slide12-sec3 {
+.slide12-sec1,
+.slide12-sec2,
+.slide12-sec3 {
   box-sizing: border-box;
   text-align: start;
+}
+
+//////////////////////////////////////
+
+.slide22 {
+  background-color: $primary-color;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.slide22 h1 {
+  text-align: center;
+  color: $color-yellow;
+  margin: 0;
+}
+
+//////////////////////////////////////
+
+.slide23 {
+  background-color: $primary-color;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.slide23 h1 {
+  text-align: center;
+  color: $color-yellow;
+  margin: 0;
+}
+
+//////////////////////////////////////
+
+.slide24 {
+  background-color: $primary-color;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.slide24 h1 {
+  text-align: center;
+  color: $color-yellow;
+  margin: 0;
 }
