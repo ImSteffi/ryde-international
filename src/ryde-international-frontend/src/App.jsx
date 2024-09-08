@@ -40,17 +40,13 @@ function App() {
 
   const handleClick = (section) => {
     if (isMobile) {
-      if (visibleSection === section) {
-        setOpenCard(section);
-        setVisibleSection(null);
-      } else {
-        setVisibleSection(section);
-      }
-    } else {
+      setVisibleSection(visibleSection === section ? null : section);
+      setOpenCard(section);
+    } else if (openCard !== section) {
       setOpenCard(section);
       setCurrentSlide(0);
     }
-  };
+  };  
 
   const handleOutsideClick = (event) => {
     if (openCard && !event.target.closest(".card")) {
@@ -62,21 +58,21 @@ function App() {
 
   const handleScroll = (event) => {
     if (!openCard || !canSwitchSlide.current) return;
-
+    
     const direction = event.deltaY > 0 ? "down" : "up";
     const slides = content[openCard].slides;
-
+  
     if (direction === "down" && currentSlide < slides.length - 1) {
       setCurrentSlide((prev) => prev + 1);
-    } else if ( direction === "up" && currentSlide > 0) {
+    } else if (direction === "up" && currentSlide > 0) {
       setCurrentSlide((prev) => prev - 1);
     }
-
+  
     canSwitchSlide.current = false;
     setTimeout(() => {
       canSwitchSlide.current = true;
     }, 750);
-  };
+  };  
 
   const handleTouchEnd = () => {
     if (!openCard || !canSwitchSlide.current) return;

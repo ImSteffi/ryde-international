@@ -6,9 +6,6 @@ const Card = ({
   currentSlide,
   handleOutsideClick,
   handleScroll,
-  handleTouchStart,
-  handleTouchMove,
-  handleTouchEnd,
   navigateCard,
 }) => {
   if (!openCard) return null;
@@ -20,21 +17,21 @@ const Card = ({
       <div
         className="card"
         onWheel={handleScroll}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
       >
-          {slides.map((slide, index) => (
-            <div
-              key={slide.id}
-              className={`slide ${index === currentSlide ? "active" : ""}`}
-            >
-              <div className="card-header">
-                <h2>{content[openCard].title}</h2>
-              </div>
-              {slide.content}
+        {slides.map((slide, index) => (
+          <div
+            key={slide.id}
+            className={`slide ${index === currentSlide ? "active" : ""}`}
+          >
+            <div className="card-header">
+              <h2>{content[openCard].title}</h2>
             </div>
-          ))}
+            {slide.content}
+          </div>
+        ))}
       </div>
 
       <div className="cardNavigation">

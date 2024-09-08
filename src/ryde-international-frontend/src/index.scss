@@ -355,6 +355,7 @@ html {
 .slide p {
   color: $color-white;
   line-height: 1.6;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .slide.active {
@@ -529,8 +530,12 @@ html {
 
 .slide12 h1 {
   text-align: center;
-  color: $color-yellow;
+  color: $color-white;
   margin: 0;
+}
+
+.slide12 h2 {
+  color: $color-yellow;
 }
 
 .slide12-sec1,
