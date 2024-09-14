@@ -6,6 +6,9 @@ const Card = ({
   currentSlide,
   handleOutsideClick,
   handleScroll,
+  handleTouchStart,
+  handleTouchMove,
+  handleTouchEnd,
   navigateCard,
 }) => {
   if (!openCard) return null;
@@ -17,9 +20,9 @@ const Card = ({
       <div
         className="card"
         onWheel={handleScroll}
-        onClick={(e) => {
-          e.stopPropagation();
-        }}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
         {slides.map((slide, index) => (
           <div

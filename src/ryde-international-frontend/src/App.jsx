@@ -40,11 +40,17 @@ function App() {
 
   const handleClick = (section) => {
     if (isMobile) {
-      setVisibleSection(visibleSection === section ? null : section);
-      setOpenCard(section);
-    } else if (openCard !== section) {
-      setOpenCard(section);
-      setCurrentSlide(0);
+      if (visibleSection === section) {
+        setOpenCard(section);
+        setVisibleSection(null);
+      } else {
+        setVisibleSection(section);
+      }
+    } else {
+      if (openCard !== section) {
+        setOpenCard(section);
+        setCurrentSlide(0);
+      }
     }
   };  
 
@@ -84,7 +90,7 @@ function App() {
       currentSlide < content[openCard].slides.length - 1
     ) {
       setCurrentSlide((prev) => prev + 1);
-    } else if (touchDistance < -50 && currentSlide > 0) {
+    } else if (touchDistance < 50 && currentSlide > 0) {
       setCurrentSlide((prev) => prev - 1);
     }
 
@@ -153,7 +159,6 @@ function App() {
           handleClick={handleClick}
         />
       ))}
-
       <Card
         openCard={openCard}
         content={content}

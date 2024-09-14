@@ -141,7 +141,7 @@ const content = {
               <img
                 src="/media/images/NWBrand.jpg"
                 alt="NWBrand_image"
-                className="slide10-image"
+                className="slide-image"
               />
             </div>
             <div className="slide10-tags">
@@ -179,7 +179,7 @@ const content = {
               <img
                 src="/media/images/nayth_in_action.jpg"
                 alt="NWBrand_image"
-                className="slide10-image"
+                className="slide-image"
               />
             </div>
           </div>
@@ -280,7 +280,29 @@ const content = {
     slides: [
       {
         id: "slide19",
-        content: <div className="slide19"></div>,
+        content: (
+          <div className="slide19">
+            <div className="slide19-image">
+              <img
+                src="/media/images/RYDE_X_ARROSTO-04_400x.jpg"
+                alt="NWBrand_image"
+                className="slide-image"
+              />
+            </div>
+            <p>
+              Helping individuals and organizations create design
+              representations of their purpose or ideas, including graphic
+              design, web design, and merchandising
+            </p>
+            <div className="slide19-image">
+              <img
+                src="/media/images/final_woolshed_brewery_copy-1_400x.jpg"
+                alt="NWBrand_image"
+                className="slide-image"
+              />
+            </div>
+          </div>
+        ),
       },
       {
         id: "slide20",
