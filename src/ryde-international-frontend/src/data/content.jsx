@@ -11,7 +11,7 @@ const content = {
     text: "As the founder of Ryde International, I started this journey with a vision to redefine the boundaries of global consulting. With over a decade of experience in the industry, my story is one of innovation, perseverance, and a relentless pursuit of excellence.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -82,7 +82,7 @@ const content = {
     text: "At Ryde International, we believe in the power of collaboration, integrity, and innovation. Our core values guide everything we do, from the way we interact with clients to the solutions we deliver. We are committed to driving meaningful change for businesses worldwide.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -105,7 +105,7 @@ const content = {
     text: "Our journey began with a single idea: to create a consulting firm that truly understands the unique challenges of today's global market. Over the years, we have grown into a trusted partner for businesses across various industries, providing them with the insights and strategies needed to thrive.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -129,7 +129,7 @@ const content = {
     text: "Throughout my career, I have had the privilege of working with some of the most forward-thinking companies around the world. My work is centered on delivering actionable insights, sustainable growth strategies, and transformative solutions that empower businesses to succeed.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -227,7 +227,7 @@ const content = {
     text: "Ryde International specializes in providing tailored consulting services that address the complex needs of modern businesses. From strategy development to digital transformation, we offer a comprehensive range of services designed to help our clients navigate the challenges of today's dynamic market environment.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -250,7 +250,7 @@ const content = {
     text: "Over the years, I have partnered with a diverse range of clients, from startups to Fortune 500 companies. My focus has always been on building long-lasting relationships that are based on trust, mutual respect, and a shared commitment to achieving outstanding results.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -274,7 +274,7 @@ const content = {
     text: "At Ryde International, design is at the heart of everything we do. Our design philosophy is about creating solutions that are not only functional but also visually compelling. We believe that great design can transform businesses and create meaningful connections with customers.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -306,11 +306,85 @@ const content = {
       },
       {
         id: "slide20",
-        content: <div className="slide20"></div>,
+        content: (
+          <div className="slide20">
+            <div className="services">
+              <h2>Our Services</h2>
+              <ul>
+                <li>
+                  <h1>Collaborative Design with Ryde Clothing</h1>
+                  <hr></hr>
+                  <p>
+                    Work closely with us and our brand Ryde Clothing on a
+                    collaborative design and merchandising project with a
+                    strategy around a joint launch of product
+                  </p>
+                </li>
+                <li>
+                  <h1>Design and Branding for Your Business</h1>
+                  <hr></hr>
+                  <p>
+                    Work with us on design/branding for your own business, team,
+                    or organization
+                  </p>
+                </li>
+                <li>
+                  <h1>Custom Manufacturing</h1>
+                  <hr></hr>
+                  <p>
+                    Work with us on custom manufacturing of uniforms, event
+                    merchandise, teamwear, and workwear
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        ),
       },
       {
         id: "slide21",
-        content: <div className="slide21"></div>,
+        content: (
+          <div className="slide21">
+            <div className="experience-card">
+              <h2>Our Experience</h2>
+              <ul className="partner-list">
+                <li>
+                  <img
+                    src="path-to-your-icon/sporting-club.png"
+                    alt="Sporting Clubs"
+                  />
+                  <span>Sporting Clubs</span>
+                </li>
+                <li>
+                  <img
+                    src="path-to-your-icon/community-group.png"
+                    alt="Community Groups"
+                  />
+                  <span>Community Groups</span>
+                </li>
+                <li>
+                  <img src="path-to-your-icon/business.png" alt="Businesses" />
+                  <span>Small to Large Businesses</span>
+                </li>
+                <li>
+                  <img
+                    src="/media/images/university_talk.jpg"
+                    alt="Universities"
+                  />
+                  <span>Universities</span>
+                </li>
+                <li>
+                  <img src="/media/images/university_talk.jpg" alt="Schools" />
+                  <span>Schools</span>
+                </li>
+                <li>
+                  <img src="path-to-your-icon/event.png" alt="Events" />
+                  <span>Events</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        ),
       },
     ],
   },
@@ -319,7 +393,7 @@ const content = {
     text: "Growth is more than just expanding your business; it's about creating sustainable success. At Ryde International, we work` closely with our clients to develop growth strategies that are innovative, data-driven, and tailored to their unique needs. We help businesses scale and succeed in today's competitive market.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -374,7 +448,7 @@ const content = {
     text: "Creating memorable experiences is key to building lasting customer relationships. Ryde International specializes in designing experiences that resonate with your audience, from digital platforms to physical spaces. We help you create impactful, meaningful interactions that drive engagement and loyalty.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/sec2_con1_slide_1.jpg" alt="Teaser Image" />
+        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
