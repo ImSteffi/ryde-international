@@ -344,42 +344,69 @@ const content = {
       {
         id: "slide21",
         content: (
-          <div className="slide21">
-            <div className="experience-card">
+          <div class="slide21">
+            <div class="experience-card">
               <h2>Our Experience</h2>
-              <ul className="partner-list">
+              <ul class="partner-list">
                 <li>
-                  <img
-                    src="path-to-your-icon/sporting-club.png"
-                    alt="Sporting Clubs"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="/media/images/coolPhotos/sporting.jpg"
+                      alt="Sporting Clubs"
+                    />
+                  </div>
                   <span>Sporting Clubs</span>
+                  <button class="hire-btn">Hire</button>
                 </li>
                 <li>
-                  <img
-                    src="path-to-your-icon/community-group.png"
-                    alt="Community Groups"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="/media/images/coolPhotos/community_groups.jpg"
+                      alt="Community Groups"
+                    />
+                  </div>
                   <span>Community Groups</span>
+                  <button class="hire-btn">Hire</button>
                 </li>
                 <li>
-                  <img src="path-to-your-icon/business.png" alt="Businesses" />
+                  <div class="image-container">
+                    <img
+                      src="/media/images/coolPhotos/small_to_large_business.jpg"
+                      alt="Small to Large Businesses"
+                    />
+                  </div>
                   <span>Small to Large Businesses</span>
+                  <button class="hire-btn">Hire</button>
                 </li>
                 <li>
-                  <img
-                    src="/media/images/university_talk.jpg"
-                    alt="Universities"
-                  />
+                  <div class="image-container">
+                    <img
+                      src="/media/images/university_talk.jpg"
+                      alt="Universities"
+                    />
+                  </div>
                   <span>Universities</span>
+                  <button class="hire-btn">Hire</button>
                 </li>
                 <li>
-                  <img src="/media/images/university_talk.jpg" alt="Schools" />
+                  <div class="image-container">
+                    <img
+                      src="/media/images/university_talk.jpg"
+                      alt="Schools"
+                    />
+                  </div>
                   <span>Schools</span>
+                  <button class="hire-btn">Hire</button>
                 </li>
                 <li>
-                  <img src="path-to-your-icon/event.png" alt="Events" />
+                  <div class="image-container">
+                    <img
+                      src="/media/images/coolPhotos/events.jpg"
+                      alt="Events"
+                    />
+                  </div>
                   <span>Events</span>
+                  <button class="hire-btn">Hire</button>
                 </li>
               </ul>
             </div>
