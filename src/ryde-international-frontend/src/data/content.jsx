@@ -483,40 +483,31 @@ const content = {
         id: "slide25",
         content: (
           <div className="slide25">
-            <div className="slide-content">
-              <h2>Ryde Clothing</h2>
-              <p>
-                Ryde Clothing is the embodiment of the purpose, values, and
-                aspirations of Ryde International.
-              </p>
-              <p>
-                We believe that it is possible, in fact, that it is essential,
-                to be a part of a community whilst exploring, developing, and
-                growing your own personal style.
-              </p>
-              <div className="button-container">
-                <a href="/tees">
-                  <img
-                    src="/media/images/coolPhotos/tee.jpg"
-                    alt="Tees"
-                    className="button-image first-image"
-                  />
-                </a>
-                <a href="/warm-things">
-                  <img
-                    src="/media/images/coolPhotos/warmwear.jpg"
-                    alt="Warm Things"
-                    className="button-image second-image"
-                  />
-                </a>
-                <a href="/headwear">
-                  <img
-                    src="/media/images/coolPhotos/headwear.jpg"
-                    alt="Headwear"
-                    className="button-image third-image"
-                  />
-                </a>
-              </div>
+            <h2>Ryde Clothing</h2>
+            <p>
+              Ryde Clothing is the embodiment of the purpose, values, and
+              aspirations of Ryde International.
+              <br></br>
+              We believe that it is possible, in fact, that it is essential, to
+              be a part of a community whilst exploring, developing, and growing
+              your own personal style.
+            </p>
+            <div className="button-container">
+              <img
+                src="/media/images/coolPhotos/tee.jpg"
+                alt="Tees"
+                className="button-image first-image"
+              />
+              <img
+                src="/media/images/coolPhotos/warmwear.jpg"
+                alt="Warm Things"
+                className="button-image second-image"
+              />
+              <img
+                src="/media/images/coolPhotos/headwear.jpg"
+                alt="Headwear"
+                className="button-image third-image"
+              />
             </div>
           </div>
         ),
