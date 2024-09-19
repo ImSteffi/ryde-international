@@ -514,7 +514,36 @@ const content = {
       },
       {
         id: "slide26",
-        content: <div className="slide26"></div>,
+        content: (
+          <div className="slide26">
+            <h1>The Mission</h1>
+            <div>
+              <div className="cont1">
+                <p>
+                  Ryde’s Mission is to help people resist the notion that
+                  growing up has to mean growing old
+                </p>
+                <span className="vertical-text N">
+                  W<br></br>R<br></br>O<br></br>N<br></br>G
+                </span>
+              </div>
+              <br></br>
+              <div className="cont1">
+                <p>
+                  We believe in the power of storytelling and creating a
+                  powerful moment for people to connect with
+                </p>
+                <span className="vertical-text Y">
+                  R<br></br>I<br></br>G<br></br>H<br></br>T
+                </span>
+              </div>
+            </div>
+            <h2>Never Growing old</h2>
+            <h2>Saltwater Culture</h2>
+            <h2>Freshwater Culture</h2>
+            <h2>Inspired by home to take us anywhere</h2>
+          </div>
+        ),
       },
       {
         id: "slide27",
