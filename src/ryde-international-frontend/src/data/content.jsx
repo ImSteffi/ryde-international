@@ -547,7 +547,38 @@ const content = {
       },
       {
         id: "slide27",
-        content: <div className="slide27"></div>,
+        content: (
+          <div className="slide27">
+            <div className="slide27-background-image">
+              <div className="bg-image-1"></div>
+              <div className="bg-image-2"></div>
+              <div className="bg-image-3"></div>
+              <div className="bg-image-4"></div>
+            </div>
+
+            <div className="content-wrapper">
+              <h2 className="headline">Welcome to the Ryde Community</h2>
+
+              <div className="content">
+                <p>
+                  Ryde Clothing is not only what we wear on our backs, but it is
+                  what we carry in our hearts.
+                </p>
+                <p>
+                  As we set about doing the work that defines so perfectly, and
+                  captures so accurately what Ryde International is designed to
+                  do...
+                </p>
+                <p>
+                  A moments and storytelling company: to help people resist the
+                  notion that growing up has to mean growing old.
+                </p>
+
+                <button className="cta-button">www.rydeclothing.co</button>
+              </div>
+            </div>
+          </div>
+        ),
       },
     ],
   },
