@@ -36,6 +36,7 @@ const Section = ({
           >
             <p>{sectionContent[contentKey].text}</p>
           </div>
+          <span className="bottom-left-span">Find Out More &rarr;</span>
         </div>
       ))}
     </div>

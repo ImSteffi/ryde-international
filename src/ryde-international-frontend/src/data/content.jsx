@@ -8,7 +8,7 @@ const content = {
   ),
   sec1con1: {
     title: "Our Founder",
-    text: "As the founder of Ryde International, I started this journey with a vision to redefine the boundaries of global consulting. With over a decade of experience in the industry, my story is one of innovation, perseverance, and a relentless pursuit of excellence.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -79,7 +79,7 @@ const content = {
   },
   sec1con2: {
     title: "We Believe In",
-    text: "At Ryde International, we believe in the power of collaboration, integrity, and innovation. Our core values guide everything we do, from the way we interact with clients to the solutions we deliver. We are committed to driving meaningful change for businesses worldwide.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -102,7 +102,7 @@ const content = {
   },
   sec1con3: {
     title: "Our Journey",
-    text: "Our journey began with a single idea: to create a consulting firm that truly understands the unique challenges of today's global market. Over the years, we have grown into a trusted partner for businesses across various industries, providing them with the insights and strategies needed to thrive.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -126,7 +126,7 @@ const content = {
 
   sec2con1: {
     title: "NWBrand",
-    text: "Throughout my career, I have had the privilege of working with some of the most forward-thinking companies around the world. My work is centered on delivering actionable insights, sustainable growth strategies, and transformative solutions that empower businesses to succeed.",
+    text: "Driving success through innovative insights, growth strategies, and transformative solutions for global leaders.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -224,7 +224,7 @@ const content = {
   },
   sec2con2: {
     title: "What We Do",
-    text: "Ryde International specializes in providing tailored consulting services that address the complex needs of modern businesses. From strategy development to digital transformation, we offer a comprehensive range of services designed to help our clients navigate the challenges of today's dynamic market environment.",
+    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -247,7 +247,7 @@ const content = {
   },
   sec2con3: {
     title: "Our Work",
-    text: "Over the years, I have partnered with a diverse range of clients, from startups to Fortune 500 companies. My focus has always been on building long-lasting relationships that are based on trust, mutual respect, and a shared commitment to achieving outstanding results.",
+    text: "Whether startups or Fortune 500s, my partnerships are founded on trust, respect, and a relentless pursuit of success.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -271,7 +271,7 @@ const content = {
 
   sec3con1: {
     title: "Ryde Design",
-    text: "At Ryde International, design is at the heart of everything we do. Our design philosophy is about creating solutions that are not only functional but also visually compelling. We believe that great design can transform businesses and create meaningful connections with customers.",
+    text: "Bringing your vision to life with us leads to innovative branding, custom merchandise, and collaborative projects. We’re here to create impactful solutions that resonate and inspire.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -417,7 +417,7 @@ const content = {
   },
   sec3con2: {
     title: "Ryde Growth",
-    text: "Growth is more than just expanding your business; it's about creating sustainable success. At Ryde International, we work` closely with our clients to develop growth strategies that are innovative, data-driven, and tailored to their unique needs. We help businesses scale and succeed in today's competitive market.",
+    text: "Growth with Ryde International is about more than expansion; it’s about creating lasting success with tailored, data-driven strategies.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
@@ -472,7 +472,7 @@ const content = {
   },
   sec3con3: {
     title: "Ryde Clothing",
-    text: "Creating memorable experiences is key to building lasting customer relationships. Ryde International specializes in designing experiences that resonate with your audience, from digital platforms to physical spaces. We help you create impactful, meaningful interactions that drive engagement and loyalty.",
+    text: "Where purpose meets fashion, we craft narratives that inspire and engage, bringing style and community together in every piece.",
     image: (
       <div className="teaser-image">
         <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
