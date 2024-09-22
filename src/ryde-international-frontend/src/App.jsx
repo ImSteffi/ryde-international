@@ -52,7 +52,7 @@ function App() {
         setCurrentSlide(0);
       }
     }
-  };  
+  };
 
   const handleOutsideClick = (event) => {
     if (openCard && !event.target.closest(".card")) {
@@ -64,21 +64,21 @@ function App() {
 
   const handleScroll = (event) => {
     if (!openCard || !canSwitchSlide.current) return;
-    
+
     const direction = event.deltaY > 0 ? "down" : "up";
     const slides = content[openCard].slides;
-  
+
     if (direction === "down" && currentSlide < slides.length - 1) {
       setCurrentSlide((prev) => prev + 1);
     } else if (direction === "up" && currentSlide > 0) {
       setCurrentSlide((prev) => prev - 1);
     }
-  
+
     canSwitchSlide.current = false;
     setTimeout(() => {
       canSwitchSlide.current = true;
     }, 750);
-  };  
+  };
 
   const handleTouchEnd = () => {
     if (!openCard || !canSwitchSlide.current) return;
@@ -138,7 +138,7 @@ function App() {
     setCurrentSlide(0);
   };
 
-  // if (!loadingComplete) {
+    // if (!loadingComplete) {
   //   return <Loading onComplete={() => setLoadingComplete(true)} />;
   // }
 
@@ -157,6 +157,7 @@ function App() {
           handleMouseEnter={handleMouseEnter}
           handleMouseLeave={handleMouseLeave}
           handleClick={handleClick}
+          openCard={openCard}
         />
       ))}
       <Card

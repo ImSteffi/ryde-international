@@ -29,14 +29,14 @@ const content = {
             <div className="slide1-title">
               <h1>Nathan Woodrow</h1>
             </div>
-            <div className="slide1-text">
-              <p>
-                Nayth Woodrow founded Ryde International with the belief that
-                growing up doesn’t mean growing old. His journey from the
-                Riverland to a global community is driven by passion, purpose,
-                and the power of storytelling
-              </p>
-            </div>
+            <p>
+              Nayth Woodrow founded Ryde International with the belief that
+              growing up doesn’t mean growing old.
+            </p>
+            <p>
+              His journey from the Riverland to a global community is driven by
+              passion, purpose, and the power of storytelling
+            </p>
             <div className="slide1-tagline">
               <p>The way you do one thing is the way you do everything</p>
             </div>
@@ -309,32 +309,40 @@ const content = {
         content: (
           <div className="slide20">
             <div className="services">
-              <h2>Our Services</h2>
               <ul>
                 <li>
-                  <h1>Collaborative Design with Ryde Clothing</h1>
-                  <hr></hr>
-                  <p>
-                    Work closely with us and our brand Ryde Clothing on a
-                    collaborative design and merchandising project with a
-                    strategy around a joint launch of product
-                  </p>
+                  <div className="slide20-card-header">
+                    <h1>Collaborative Design with Ryde Clothing</h1>
+                  </div>
+                  <div className="slide20-card-body">
+                    <p>
+                      Work closely with us and our brand Ryde Clothing on a
+                      collaborative design and merchandising project with a
+                      strategy around a joint launch of product
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <h1>Design and Branding for Your Business</h1>
-                  <hr></hr>
-                  <p>
-                    Work with us on design/branding for your own business, team,
-                    or organization
-                  </p>
+                  <div className="slide20-card-header">
+                    <h1>Design and Branding for Your Business</h1>
+                  </div>
+                  <div className="slide20-card-body">
+                    <p>
+                      Work with us on design/branding for your own business,
+                      team, or organization
+                    </p>
+                  </div>
                 </li>
                 <li>
-                  <h1>Custom Manufacturing</h1>
-                  <hr></hr>
-                  <p>
-                    Work with us on custom manufacturing of uniforms, event
-                    merchandise, teamwear, and workwear
-                  </p>
+                  <div className="slide20-card-header">
+                    <h1>Custom Manufacturing</h1>
+                  </div>
+                  <div className="slide20-card-body">
+                    <p>
+                      Work with us on custom manufacturing of uniforms, event
+                      merchandise, teamwear, and workwear
+                    </p>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -346,7 +354,6 @@ const content = {
         content: (
           <div class="slide21">
             <div class="experience-card">
-              <h2>Our Experience</h2>
               <ul class="partner-list">
                 <li>
                   <div class="image-container">
@@ -483,7 +490,6 @@ const content = {
         id: "slide25",
         content: (
           <div className="slide25">
-            <h2>Ryde Clothing</h2>
             <p>
               Ryde Clothing is the embodiment of the purpose, values, and
               aspirations of Ryde International.
@@ -516,14 +522,13 @@ const content = {
         id: "slide26",
         content: (
           <div className="slide26">
-            <h1>The Mission</h1>
             <div>
               <div className="cont1">
                 <p>
                   Ryde’s Mission is to help people resist the notion that
                   growing up has to mean growing old
                 </p>
-                <span className="vertical-text N">
+                <span className="vertical-text">
                   W<br></br>R<br></br>O<br></br>N<br></br>G
                 </span>
               </div>

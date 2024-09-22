@@ -7,13 +7,16 @@ const Section = ({
   handleMouseEnter,
   handleMouseLeave,
   handleClick,
+  openCard,
 }) => {
+  const isReset = openCard !== null;
+
   return (
     <div className={`section ${sectionName}`}>
       {Object.keys(sectionContent).map((contentKey, index) => (
         <div
           key={index}
-          className={`contentDiv ${contentKey}`}
+          className={`contentDiv ${contentKey} ${isReset ? 'reset' : ''}`}
           style={{
             opacity:
               visibleSection === null || visibleSection === contentKey
