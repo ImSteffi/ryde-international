@@ -11,7 +11,7 @@ const content = {
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
+        <img src="/media/images/nayth_portrait.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -274,7 +274,10 @@ const content = {
     text: "Bringing your vision to life with us leads to innovative branding, custom merchandise, and collaborative projects. We’re here to create impactful solutions that resonate and inspire.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
+        <img
+          src="/media/images/RYDE_X_ARROSTO-04_400x.jpg"
+          alt="Teaser Image"
+        />
       </div>
     ),
     slides: [
@@ -282,22 +285,24 @@ const content = {
         id: "slide19",
         content: (
           <div className="slide19">
-            <div className="slide19-image">
+            <div className="slide19-image-container">
               <img
                 src="/media/images/RYDE_X_ARROSTO-04_400x.jpg"
-                alt="NWBrand_image"
+                alt="RYDE X Arrost"
                 className="slide-image"
               />
             </div>
             <p>
-              Helping individuals and organizations create design
-              representations of their purpose or ideas, including graphic
-              design, web design, and merchandising
+              We assist <strong>individuals</strong> and
+              <strong> organizations</strong> in creating
+              <strong> powerful design representations</strong> of their purpose
+              or ideas, including <strong>graphic design</strong>,
+              <strong> web design</strong>, and <strong>merchandising</strong>.
             </p>
-            <div className="slide19-image">
+            <div className="slide19-image-container">
               <img
                 src="/media/images/final_woolshed_brewery_copy-1_400x.jpg"
-                alt="NWBrand_image"
+                alt="Final Woolshed Brewery"
                 className="slide-image"
               />
             </div>
@@ -316,9 +321,10 @@ const content = {
                   </div>
                   <div className="slide20-card-body">
                     <p>
-                      Work closely with us and our brand Ryde Clothing on a
-                      collaborative design and merchandising project with a
-                      strategy around a joint launch of product
+                      Work closely with us and our brand{" "}
+                      <strong>Ryde Clothing</strong> on a collaborative design
+                      and merchandising project, strategizing a joint product
+                      launch.
                     </p>
                   </div>
                 </li>
@@ -328,8 +334,9 @@ const content = {
                   </div>
                   <div className="slide20-card-body">
                     <p>
-                      Work with us on design/branding for your own business,
-                      team, or organization
+                      Partner with us on <strong>design and branding</strong>{" "}
+                      for your business, team, or organization, ensuring a
+                      unique and impactful presence.
                     </p>
                   </div>
                 </li>
@@ -339,8 +346,9 @@ const content = {
                   </div>
                   <div className="slide20-card-body">
                     <p>
-                      Work with us on custom manufacturing of uniforms, event
-                      merchandise, teamwear, and workwear
+                      Engage with us on <strong>custom manufacturing</strong> of
+                      uniforms, event merchandise, teamwear, and workwear,
+                      tailored to your needs.
                     </p>
                   </div>
                 </li>
@@ -435,10 +443,18 @@ const content = {
         id: "slide22",
         content: (
           <div className="slide22">
-            <p>
-              Helping to bring your purpose to life in a tangible way, to drive
-              more effective leadership, sustainability in your company or team.
-            </p>
+            <div className="slide22-content">
+              <h2 className="slide22-title">Bringing Your Purpose to Life</h2>
+              <p className="slide22-text">
+                We help transform your vision into reality, fueling
+                <strong> effective leadership</strong> and fostering
+                <strong> sustainability</strong> within your company or team.
+              </p>
+              <p className="slide22-text">
+                Together, we'll drive <strong>lasting impact</strong> and create
+                a purpose-driven culture that resonates at every level.
+              </p>
+            </div>
           </div>
         ),
       },
@@ -446,12 +462,25 @@ const content = {
         id: "slide23",
         content: (
           <div className="slide23">
-            <p>
-              What do you DO? The research and data tells us that by you AND you
-              team being clear on your corporate purpose, values and standards
-              and knowinig how to connect there talents, skillsets and purpose
-              with the companies is how we drive effective outcomes.{" "}
-            </p>
+            <div className="slide23-content">
+              <h2 className="slide23-title">What Do You DO?</h2>
+              <p className="slide23-text">
+                The research and data are clear:
+                <strong> Understanding your corporate purpose</strong>,
+                <strong> defining your values</strong>, and
+                <strong> setting your standards</strong> are essential.
+              </p>
+              <p className="slide23-text">
+                But it doesn’t stop there.
+                <strong> Aligning your team's talents and skillsets </strong>
+                with these core principles is how you move from intention to
+                <strong> impact</strong>.
+              </p>
+              <p className="slide23-text">
+                <strong>When purpose meets practice</strong>, your company not
+                only functions — it thrives.
+              </p>
+            </div>
           </div>
         ),
       },
@@ -459,19 +488,45 @@ const content = {
         id: "slide24",
         content: (
           <div className="slide24">
-            <p>
-              The work we do together...can be done in person or remotely. What
-              you would be looking to engage Ryde Growth for is the development
-              of key strategic information for you, your team, club or
-              organisation. This may take the form of a Strategic Plan, Just
-              Cause [capturing your purpose, values and targets], Workforce
-              Management Strategy [capturing organisational growth and the
-              necessary resourcing], Messaging Strategy [what you say and how
-              you say it], or other pieces of critical work that we co-develop
-              together. The Ryde Growth team specialises in the work of
-              identifying potential performance gaps within your organisation,
-              and developing appropriate next steps to address them.
-            </p>
+            <div className="slide24-content">
+              <h2 className="slide24-title">Collaborative Growth with Ryde</h2>
+              <p className="slide24-intro">
+                Whether in person or remotely, the work we do together is
+                designed to drive impactful results.
+              </p>
+              <p className="slide24-text">
+                When you engage with Ryde Growth, you're investing in the
+                development of
+                <strong> key strategic information</strong> tailored to your
+                team, club, or organization.
+              </p>
+              <div className="slide24-strategy-list">
+                <h3>Our Services Include:</h3>
+                <ul>
+                  <li>
+                    <strong>Strategic Plan:</strong> Capturing your purpose,
+                    values, and targets.
+                  </li>
+                  <li>
+                    <strong>Just Cause:</strong> Aligning your mission with
+                    actionable goals.
+                  </li>
+                  <li>
+                    <strong>Workforce Management Strategy:</strong> Focusing on
+                    organizational growth and necessary resourcing.
+                  </li>
+                  <li>
+                    <strong>Messaging Strategy:</strong> Refining what you say
+                    and how you say it.
+                  </li>
+                </ul>
+              </div>
+              <p className="slide24-text">
+                The Ryde Growth team excels at identifying potential performance
+                gaps and co-developing the next steps to address them
+                effectively.
+              </p>
+            </div>
           </div>
         ),
       },
@@ -482,7 +537,7 @@ const content = {
     text: "Where purpose meets fashion, we craft narratives that inspire and engage, bringing style and community together in every piece.",
     image: (
       <div className="teaser-image">
-        <img src="/media/images/university_talk.jpg" alt="Teaser Image" />
+        <img src="/media/images/coolPhotos/tee.jpg" alt="Teaser Image" />
       </div>
     ),
     slides: [
@@ -491,12 +546,16 @@ const content = {
         content: (
           <div className="slide25">
             <p>
-              Ryde Clothing is the embodiment of the purpose, values, and
-              aspirations of Ryde International.
-              <br></br>
-              We believe that it is possible, in fact, that it is essential, to
-              be a part of a community whilst exploring, developing, and growing
-              your own personal style.
+              <strong>Ryde Clothing</strong> isn't just apparel—it's the
+              embodiment of our <strong>purpose</strong>,{" "}
+              <strong>values</strong>, and <strong>aspirations</strong> at Ryde
+              International.
+              <br />
+              We believe that being part of a <strong>community</strong> isn't
+              just possible—it's <strong>essential</strong>. It's where you can{" "}
+              <strong>explore</strong>, <strong>develop</strong>, and{" "}
+              <strong>grow</strong> your personal style, all while staying true
+              to who you are.
             </p>
             <div className="button-container">
               <img
@@ -525,21 +584,21 @@ const content = {
             <div>
               <div className="cont1">
                 <p>
-                  Ryde’s Mission is to help people resist the notion that
-                  growing up has to mean growing old
+                  At Ryde, <strong>our mission is clear</strong>: to help people
+                  resist the notion that growing up means growing old.
                 </p>
                 <span className="vertical-text">
-                  W<br></br>R<br></br>O<br></br>N<br></br>G
+                  W<br />R<br />O<br />N<br />G
                 </span>
               </div>
-              <br></br>
+              <br />
               <div className="cont1">
                 <p>
-                  We believe in the power of storytelling and creating a
-                  powerful moment for people to connect with
+                  We believe in the <strong>power of storytelling</strong> — in
+                  crafting moments that connect people in meaningful ways.
                 </p>
                 <span className="vertical-text Y">
-                  R<br></br>I<br></br>G<br></br>H<br></br>T
+                  R<br />I<br />G<br />H<br />T
                 </span>
               </div>
             </div>
